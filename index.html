@@ -1,0 +1,213 @@
+<index.html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozen Vitta - Emagrecedor Natural</title>
+
+    <!-- PIXEL META (COLE SEU PIXEL AQUI) -->
+    <!-- 
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'SEU_PIXEL_ID_AQUI');
+        fbq('track', 'PageView');
+    </script>
+    -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #40B5AD, #2B4C9C);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            color: #2B4C9C;
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #40B5AD;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .product-image {
+            max-width: 300px;
+            margin: 30px auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        }
+
+        .benefits {
+            text-align: left;
+            margin: 30px auto;
+            max-width: 400px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .benefit-item::before {
+            content: "✓";
+            background: linear-gradient(135deg, #40B5AD, #2B4C9C);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #40B5AD, #2B4C9C);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 30px 0 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(43, 76, 156, 0.6);
+        }
+
+        .security {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .security::before {
+            content: "🔒";
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="badge">🔥 LANÇAMENTO EXCLUSIVO</div>
+
+        <h1>O Emagrecedor <span class="highlight">4x Mais Potente</span> do Brasil</h1>
+
+        <p class="subtitle">Nova fórmula com 13 componentes ativos que atacam a gordura diretamente</p>
+
+        <!-- LOGO (opcional) -->
+        <img src="./img/logo.png" alt="Logo" style="max-width:130px; margin-bottom:20px;">
+
+        <!-- PRODUTO -->
+        <div class="product-image">
+            <img src="./img/produto.png" alt="Ozen Vitta">
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-item">Fórmula exclusiva 4x mais potente</div>
+            <div class="benefit-item">13 componentes ativos comprovados</div>
+            <div class="benefit-item">Sem glúten e sem lactose</div>
+            <div class="benefit-item">Ataca a gordura diretamente</div>
+            <div class="benefit-item">Acelera a perda de peso naturalmente</div>
+        </div>
+
+        <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" 
+           class="cta-button"
+           onclick="fbq && fbq('track', 'InitiateCheckout')">
+            QUERO CONHECER O OZEN VITTA →
+        </a>
+
+        <div class="security">Compra 100% segura e protegida</div>
+    </div>
+
+    <script>
+        // Rastreio básico de scroll
+        let scrolled = false;
+        window.addEventListener("scroll", () => {
+            if (!scrolled && window.scrollY > 200) {
+                if (typeof fbq === "function") fbq('track', 'ViewContent');
+                scrolled = true;
+            }
+        });
+    </script>
+</body>
+</html>
