@@ -1,36 +1,15 @@
-<index.html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozen Vitta - Emagrecedor Natural</title>
 
-    <!-- PIXEL META (COLE SEU PIXEL AQUI) -->
-    <!-- 
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'SEU_PIXEL_ID_AQUI');
-        fbq('track', 'PageView');
-    </script>
-    -->
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -39,10 +18,11 @@
         }
 
         .container {
-            max-width: 600px;
+            width: 100%;
+            max-width: 480px; /* antes era 600px */
             background: white;
             border-radius: 20px;
-            padding: 40px 30px;
+            padding: 30px 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             text-align: center;
         }
@@ -66,25 +46,34 @@
 
         h1 {
             color: #2B4C9C;
-            font-size: 32px;
-            line-height: 1.2;
+            font-size: 28px;
+            line-height: 1.3;
             margin-bottom: 15px;
         }
 
-        .highlight {
-            color: #40B5AD;
-            font-weight: bold;
-        }
+        .highlight { color: #40B5AD; font-weight: bold; }
 
         .subtitle {
             color: #666;
-            font-size: 18px;
-            margin-bottom: 30px;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
-        .product-image {
-            max-width: 300px;
-            margin: 30px auto;
+        /* LOGO */
+        .logo {
+            max-width: 130px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        /* PRODUTO */
+        .product-image img {
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
             animation: float 3s ease-in-out infinite;
         }
 
@@ -93,23 +82,17 @@
             50% { transform: translateY(-10px); }
         }
 
-        .product-image img {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
-        }
-
         .benefits {
             text-align: left;
-            margin: 30px auto;
-            max-width: 400px;
+            margin: 25px auto;
+            max-width: 350px;
         }
 
         .benefit-item {
             display: flex;
             align-items: center;
-            margin: 15px 0;
-            font-size: 16px;
+            margin: 12px 0;
+            font-size: 15px;
             color: #333;
         }
 
@@ -117,31 +100,27 @@
             content: "✓";
             background: linear-gradient(135deg, #40B5AD, #2B4C9C);
             color: white;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
-            flex-shrink: 0;
+            margin-right: 12px;
         }
 
         .cta-button {
             display: inline-block;
             background: linear-gradient(90deg, #40B5AD, #2B4C9C);
             color: white;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
-            padding: 18px 50px;
+            padding: 16px 40px;
             border-radius: 50px;
             text-decoration: none;
-            margin: 30px 0 20px;
-            transition: all 0.3s ease;
+            margin-top: 20px;
             box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4);
-            cursor: pointer;
-            border: none;
+            transition: 0.3s;
         }
 
         .cta-button:hover {
@@ -150,36 +129,28 @@
         }
 
         .security {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            margin-top: 20px;
             color: #666;
             font-size: 14px;
-            margin-top: 20px;
-        }
-
-        .security::before {
-            content: "🔒";
-            font-size: 18px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+
         <div class="badge">🔥 LANÇAMENTO EXCLUSIVO</div>
 
         <h1>O Emagrecedor <span class="highlight">4x Mais Potente</span> do Brasil</h1>
 
         <p class="subtitle">Nova fórmula com 13 componentes ativos que atacam a gordura diretamente</p>
 
-        <!-- LOGO (opcional) -->
-        <img src="/assets/logo.png"" alt="Logo" style="max-width:130px; margin-bottom:20px;">
+        <!-- LOGO -->
+        <img src="assets/logo.png" alt="Logo" class="logo">
 
         <!-- PRODUTO -->
         <div class="product-image">
-            <img src="/assets/produto.png" alt="Ozen Vitta">
+            <img src="assets/produto.png" alt="Ozen Vitta">
         </div>
 
         <div class="benefits">
@@ -190,24 +161,13 @@
             <div class="benefit-item">Acelera a perda de peso naturalmente</div>
         </div>
 
-        <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" 
-           class="cta-button"
-           onclick="fbq && fbq('track', 'InitiateCheckout')">
+        <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">
             QUERO CONHECER O OZEN VITTA →
         </a>
 
-        <div class="security">Compra 100% segura e protegida</div>
+        <div class="security">🔒 Compra 100% segura e protegida</div>
     </div>
-
-    <script>
-        // Rastreio básico de scroll
-        let scrolled = false;
-        window.addEventListener("scroll", () => {
-            if (!scrolled && window.scrollY > 200) {
-                if (typeof fbq === "function") fbq('track', 'ViewContent');
-                scrolled = true;
-            }
-        });
-    </script>
 </body>
 </html>
+
+
