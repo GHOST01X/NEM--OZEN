@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozen Vitta - Emagrecedor Natural</title>
 
+    <!-- COLE SEU PIXEL DO META AQUI -->
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -19,7 +21,7 @@
 
         .container {
             width: 100%;
-            max-width: 480px; /* antes era 600px */
+            max-width: 480px;
             background: white;
             border-radius: 20px;
             padding: 30px 20px;
@@ -66,7 +68,13 @@
             display: block;
         }
 
-        /* PRODUTO */
+        /* PRODUTO COM SELO */
+        .product-wrapper {
+            position: relative;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
         .product-image img {
             width: 100%;
             max-width: 260px;
@@ -80,6 +88,38 @@
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
+        }
+
+        /* SELO DE GARANTIA - Pequeno e discreto */
+        .guarantee-seal {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #40B5AD, #2B4C9C);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 6px 16px rgba(43, 76, 156, 0.4);
+            border: 3px solid white;
+            z-index: 10;
+        }
+
+        .guarantee-seal .days {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .guarantee-seal .text {
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-top: 2px;
         }
 
         .benefits {
@@ -107,6 +147,8 @@
             align-items: center;
             justify-content: center;
             margin-right: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
         }
 
         .cta-button {
@@ -133,6 +175,89 @@
             color: #666;
             font-size: 14px;
         }
+
+        /* OTIMIZAÇÃO PARA DESKTOP */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 550px;
+                padding: 40px 35px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .logo {
+                max-width: 150px;
+            }
+
+            .product-wrapper {
+                max-width: 280px;
+            }
+
+            .product-image img {
+                max-width: 280px;
+            }
+
+            .guarantee-seal {
+                width: 75px;
+                height: 75px;
+                top: -12px;
+                right: -12px;
+            }
+
+            .guarantee-seal .days {
+                font-size: 26px;
+            }
+
+            .guarantee-seal .text {
+                font-size: 9px;
+            }
+
+            .benefits {
+                max-width: 400px;
+            }
+
+            .benefit-item {
+                font-size: 16px;
+                margin: 14px 0;
+            }
+
+            .cta-button {
+                font-size: 19px;
+                padding: 18px 50px;
+            }
+        }
+
+        /* MOBILE PEQUENO */
+        @media (max-width: 400px) {
+            .container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .guarantee-seal {
+                width: 58px;
+                height: 58px;
+                top: -8px;
+                right: -8px;
+            }
+
+            .guarantee-seal .days {
+                font-size: 20px;
+            }
+
+            .guarantee-seal .text {
+                font-size: 7px;
+            }
+        }
     </style>
 </head>
 
@@ -148,9 +273,17 @@
         <!-- LOGO -->
         <img src="assets/logo.png" alt="Logo" class="logo">
 
-        <!-- PRODUTO -->
-        <div class="product-image">
-            <img src="assets/produto.png" alt="Ozen Vitta">
+        <!-- PRODUTO COM SELO DE GARANTIA -->
+        <div class="product-wrapper">
+            <!-- Selo de Garantia 30 dias -->
+            <div class="guarantee-seal">
+                <div class="days">30</div>
+                <div class="text">Dias<br>Garantia</div>
+            </div>
+
+            <div class="product-image">
+                <img src="assets/produto.png" alt="Ozen Vitta">
+            </div>
         </div>
 
         <div class="benefits">
@@ -167,7 +300,13 @@
 
         <div class="security">🔒 Compra 100% segura e protegida</div>
     </div>
+
+    <script>
+        // Rastrear clique no CTA (descomente quando adicionar o pixel)
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            // fbq('track', 'Lead');
+            console.log('Clique no CTA registrado');
+        });
+    </script>
 </body>
 </html>
-
-
