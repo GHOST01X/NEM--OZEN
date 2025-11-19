@@ -61,14 +61,12 @@
             margin-bottom: 20px;
         }
 
-        /* LOGO */
         .logo {
             max-width: 130px;
             margin: 0 auto 20px auto;
             display: block;
         }
 
-        /* PRODUTO COM SELO */
         .product-wrapper {
             position: relative;
             max-width: 260px;
@@ -90,7 +88,6 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* SELO DE GARANTIA */
         .guarantee-seal {
             position: absolute;
             top: -15px;
@@ -184,115 +181,31 @@
             font-size: 14px;
         }
 
-        /* DESKTOP OTIMIZADO (AGORA COM TAMANHO NORMAL) */
         @media (min-width: 768px) {
-            body {
-                padding: 20px;
-            }
-
-            .container {
-                max-width: 420px;
-                padding: 30px 25px;
-            }
-
-            .badge {
-                font-size: 13px;
-                padding: 8px 18px;
-                margin-bottom: 15px;
-            }
-
-            h1 {
-                font-size: 26px;
-                margin-bottom: 12px;
-                line-height: 1.3;
-            }
-
-            .subtitle {
-                font-size: 15px;
-                margin-bottom: 20px;
-            }
-
-            .logo {
-                max-width: 120px;
-                margin-bottom: 18px;
-            }
-
-            .product-wrapper {
-                max-width: 220px;
-                margin: 20px auto;
-            }
-
-            .product-image img {
-                max-width: 220px;
-            }
-
-            .guarantee-seal {
-                width: 70px;
-                height: 70px;
-                top: -12px;
-                right: -12px;
-                border: 3px solid white;
-            }
-
-            .guarantee-seal .days {
-                font-size: 22px;
-            }
-
-            .guarantee-seal .text {
-                font-size: 8px;
-            }
-
-            .benefits {
-                max-width: 300px;
-                margin: 20px auto;
-            }
-
-            .benefit-item {
-                font-size: 13px;
-                margin: 10px 0;
-            }
-
-            .benefit-item::before {
-                width: 22px;
-                height: 22px;
-            }
-
-            .cta-button {
-                font-size: 15px;
-                padding: 12px 35px;
-                margin-top: 15px;
-            }
-
-            .security {
-                font-size: 12px;
-                margin-top: 18px;
-            }
+            body { padding: 20px; }
+            .container { max-width: 420px; padding: 30px 25px; }
+            .badge { font-size: 13px; padding: 8px 18px; margin-bottom: 15px; }
+            h1 { font-size: 26px; margin-bottom: 12px; line-height: 1.3; }
+            .subtitle { font-size: 15px; margin-bottom: 20px; }
+            .logo { max-width: 120px; margin-bottom: 18px; }
+            .product-wrapper { max-width: 220px; margin: 20px auto; }
+            .product-image img { max-width: 220px; }
+            .guarantee-seal { width: 70px; height: 70px; top: -12px; right: -12px; border: 3px solid white; }
+            .guarantee-seal .days { font-size: 22px; }
+            .guarantee-seal .text { font-size: 8px; }
+            .benefits { max-width: 300px; margin: 20px auto; }
+            .benefit-item { font-size: 13px; margin: 10px 0; }
+            .benefit-item::before { width: 22px; height: 22px; }
+            .cta-button { font-size: 15px; padding: 12px 35px; margin-top: 15px; }
+            .security { font-size: 12px; margin-top: 18px; }
         }
 
-        /* MOBILE PEQUENO */
         @media (max-width: 400px) {
-            .container {
-                padding: 25px 18px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .guarantee-seal {
-                width: 70px;
-                height: 70px;
-                top: -12px;
-                right: -12px;
-            }
-
-            .guarantee-seal .days {
-                font-size: 24px;
-            }
-
-            .guarantee-seal .text {
-                font-size: 8px;
-            }
+            .container { padding: 25px 18px; }
+            h1 { font-size: 24px; }
+            .guarantee-seal { width: 70px; height: 70px; top: -12px; right: -12px; }
+            .guarantee-seal .days { font-size: 24px; }
+            .guarantee-seal .text { font-size: 8px; }
         }
     </style>
 </head>
@@ -302,14 +215,22 @@
 
         <div class="badge">🔥 LANÇAMENTO EXCLUSIVO</div>
 
-        <h1>Emagreça Sem Sofrimento<span class="highlight"> e Sem Passar Fome!</span></h1>
+        <h1>Você já tentou dieta e exercícios e ainda sente que o peso não vai embora?</h1>
 
-        <p class="subtitle">Fórmula completa com 13 ativos naturais que aceleram seu metabolismo e controlam a fome</p>
+        <p class="subtitle" style="margin-top: 10px;">
+            Não é falta de esforço. Muitas pessoas a partir dos 25 anos começam a sentir o metabolismo desacelerar, dificultando a perda de peso mesmo fazendo tudo certo.
+        </p>
 
-        <!-- LOGO -->
         <img src="assets/logo.png" alt="Logo" class="logo">
 
-        <!-- PRODUTO COM SELO DE GARANTIA -->
+        <h1 style="font-size: 23px; margin-top: 20px;">
+            Conheça o <span class="highlight">Ozen Vitta</span>
+        </h1>
+
+        <p class="subtitle">
+            Um suplemento natural com 13 ativos que apoiam o metabolismo, auxiliam na digestão e ajudam no controle da fome — sem sofrimento e sem medidas extremas.
+        </p>
+
         <div class="product-wrapper">
             <div class="guarantee-seal">
                 <div class="days">30</div>
@@ -321,16 +242,46 @@
             </div>
         </div>
 
-        <div class="benefits">
-            <div class="benefit-item">Ajuda na queima de gordura localizada naturalmente</div>
-            <div class="benefit-item">Diminui a fome e controla a ansiedade</div>
-            <div class="benefit-item">Sem glúten e sem lactose</div>
-            <div class="benefit-item">Acelera o metabolismo e aumenta energia</div>
-            <div class="benefit-item">Melhora a saúde intestinal e digestão</div>
+        <div style="max-width: 350px; margin: 0 auto; text-align: left; margin-top: 20px;">
+            <p style="color:#333; font-size: 15px; margin-bottom: 10px; font-weight: bold;">
+                Por que tantas pessoas têm dificuldade para emagrecer?
+            </p>
+            <p style="color:#555; font-size: 14px; margin-bottom: 15px;">
+                Após os 25 anos, o corpo tende a:
+            </p>
+
+            <ul style="padding-left: 15px; color: #444; font-size: 14px;">
+                <li>Reduzir o ritmo do metabolismo</li>
+                <li>Aumentar reservas de gordura</li>
+                <li>Gerar mais fome emocional</li>
+                <li>Responder mais lentamente a dietas</li>
+            </ul>
         </div>
 
-        <p style="color:#555; font-size:14px; margin-top:15px; margin-bottom:8px;">
-            Você será redirecionado para a página oficial do fabricante 👇
+        <div style="max-width: 350px; margin: 20px auto 10px auto; text-align: left;">
+            <p style="color:#333; font-size: 15px; margin-bottom: 10px; font-weight: bold;">
+                Como o Ozen Vitta atua?
+            </p>
+
+            <p style="color:#555; font-size: 14px; margin-bottom: 10px;">
+                Sua fórmula combina fibras, vitaminas e nutrientes que juntos podem:
+            </p>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-item">Apoiar o metabolismo natural</div>
+            <div class="benefit-item">Ajudar no controle do apetite</div>
+            <div class="benefit-item">Melhorar digestão e funcionamento intestinal</div>
+            <div class="benefit-item">Aumentar disposição no dia a dia</div>
+            <div class="benefit-item">Auxiliar na redução gradual de gordura</div>
+        </div>
+
+        <p style="color:#333; font-size: 15px; font-weight: bold; margin-top: 20px;">
+            Se você quer recomeçar com uma solução mais inteligente, essa pode ser sua chance.
+        </p>
+
+        <p style="color:#555; font-size:14px; margin-top:10px;">
+            Ao continuar, você será direcionado(a) para a página oficial do fabricante 👇
         </p>
 
         <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">
