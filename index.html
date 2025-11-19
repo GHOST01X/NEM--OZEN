@@ -136,42 +136,62 @@
             font-weight: 700;
         }
 
-        /* Animações usadas nos novos blocos */
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(12px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Bloco de benefícios reformulado */
-        .benefits {
-            margin-top: 25px;
+        /* Selo de cliente verificado */
+        .verified-badge {
+            display: inline-block;
+            background: #40B5AD;
+            color: white;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 6px;
         }
 
-        .benefits-title {
-            font-size: 20px;
-            font-weight: 800;
-            text-align: left;
-            color: #2B4C9C;
-            margin-bottom: 15px;
+        /* Carrossel */
+        .carousel {
+            width: 100%;
+            margin-top: 35px;
+            overflow: hidden;
+            position: relative;
         }
 
-        .benefit-card {
+        .carousel-inner {
+            display: flex;
+            width: 400%;
+            animation: slide 16s infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(-300%); }
+        }
+
+        .testimonial {
+            width: 100%;
+            padding: 15px;
             background: #f7faff;
-            border-left: 5px solid #40B5AD;
-            padding: 12px 15px;
-            margin: 10px 0;
+            border-left: 4px solid #40B5AD;
             border-radius: 10px;
             text-align: left;
-            animation: fadeIn 0.6s ease-in-out;
             font-size: 15px;
-            line-height: 1.4;
-            display: flex;
-            align-items: flex-start;
+            box-sizing: border-box;
+            animation: fadeIn 0.6s ease;
         }
 
-        .benefit-card span {
-            margin-right: 8px;
-            font-size: 18px;
+        .testimonial strong {
+            color: #2B4C9C;
+            font-size: 15px;
         }
 
         .cta-button {
@@ -227,71 +247,30 @@
             </div>
         </div>
 
-        <!-- BLOCO SOBRE DIFICULDADE -->
-        <div style="
-            background: linear-gradient(135deg, #ffffff, #eef3ff);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            margin-top: 35px;
-            text-align:left;
-            animation: fadeIn 0.7s ease-in-out;
-        ">
-            <h2 style="color:#2B4C9C; font-size:20px; font-weight:900; margin-bottom:10px;">
-                ❗ Por que tanta gente tem dificuldade para emagrecer?
-            </h2>
+        <!-- CARROSSEL DE DEPOIMENTOS -->
+        <div class="carousel">
+            <div class="carousel-inner">
 
-            <p style="font-size:15px; color:#444; margin-bottom:12px;">
-                Após os <strong>25 anos</strong>, o organismo passa por mudanças naturais que dificultam os resultados:
-            </p>
+                <div class="testimonial">
+                    <strong>Talita, 33 <span class="verified-badge">Cliente verificado</span></strong><br>
+                    "Comprei 3 potes e vou adquirir mais, estou super feliz com o resultado que tive!"
+                </div>
 
-            <ul style="list-style:none; padding-left:0; font-size:15px; font-weight:600; color:#333; line-height:1.5;">
-                <li style="margin-bottom:8px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">🐌</span>
-                    Metabolismo começa a ficar mais lento
-                </li>
-                <li style="margin-bottom:8px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">🥠</span>
-                    O corpo armazena mais gordura do que antes
-                </li>
-                <li style="margin-bottom:8px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">😣</span>
-                    Fome emocional e ansiedade atrapalham a rotina
-                </li>
-                <li style="margin-bottom:0; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">💧</span>
-                    Dietas demoram mais para mostrar resultados
-                </li>
-            </ul>
-        </div>
+                <div class="testimonial">
+                    <strong>Thayna, 27 <span class="verified-badge">Cliente verificado</span></strong><br>
+                    "A entrega foi mais rápida que imaginei, em 6 dias já estava na minha casa"
+                </div>
 
-        <!-- BENEFÍCIOS -->
-        <div class="benefits">
-            <div class="benefits-title">💚 Como o Ozen Vitta pode te ajudar?</div>
+                <div class="testimonial">
+                    <strong>Carol, 30 <span class="verified-badge">Cliente verificado</span></strong><br>
+                    "Mesmo morando em regiões afastadas, meu OzenVitta chegou certinho! Obrigada"
+                </div>
 
-            <div class="benefit-card">
-                <span>🔥</span>
-                Auxilia na queima de gordura localizada de forma natural
-            </div>
+                <div class="testimonial">
+                    <strong>Fátima, 59 <span class="verified-badge">Cliente verificado</span></strong><br>
+                    "Mesmo após a menopausa eu estou tendo muito resultado em pouco tempo! Muito feliz!"
+                </div>
 
-            <div class="benefit-card">
-                <span>🍽️</span>
-                Ajuda no controle do apetite e na redução da compulsão
-            </div>
-
-            <div class="benefit-card">
-                <span>⚡</span>
-                Pode contribuir para mais energia e melhor disposição
-            </div>
-
-            <div class="benefit-card">
-                <span>🌿</span>
-                Sem glúten, sem lactose e com ativos naturais
-            </div>
-
-            <div class="benefit-card">
-                <span>🧠</span>
-                Pode ajudar no bem-estar e na redução do estresse alimentar
             </div>
         </div>
 
@@ -302,6 +281,11 @@
         <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">
             QUERO CONHECER O OZEN VITTA →
         </a>
+
+        <div class="security">🔒 Compra 100% segura e protegida</div>
+    </div>
+</body>
+</html>
 
         <div class="security">🔒 Compra 100% segura e protegida</div>
     </div>
