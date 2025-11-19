@@ -90,7 +90,7 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* SELO DE GARANTIA MELHORADO */
+        /* SELO DE GARANTIA */
         .guarantee-seal {
             position: absolute;
             top: -15px;
@@ -184,107 +184,88 @@
             font-size: 14px;
         }
 
-        /* OTIMIZAÇÃO PARA DESKTOP - AJUSTADO */
+        /* DESKTOP OTIMIZADO (AGORA COM TAMANHO NORMAL) */
         @media (min-width: 768px) {
             body {
-                padding: 40px;
+                padding: 20px;
             }
 
             .container {
-                max-width: 600px;
-                padding: 50px 45px;
+                max-width: 420px;
+                padding: 30px 25px;
             }
 
             .badge {
-                font-size: 15px;
-                padding: 10px 25px;
+                font-size: 13px;
+                padding: 8px 18px;
+                margin-bottom: 15px;
             }
 
             h1 {
-                font-size: 36px;
-                margin-bottom: 18px;
+                font-size: 26px;
+                margin-bottom: 12px;
+                line-height: 1.3;
             }
 
             .subtitle {
-                font-size: 18px;
-                margin-bottom: 30px;
-                line-height: 1.6;
+                font-size: 15px;
+                margin-bottom: 20px;
             }
 
             .logo {
-                max-width: 160px;
-                margin-bottom: 25px;
+                max-width: 120px;
+                margin-bottom: 18px;
             }
 
             .product-wrapper {
-                max-width: 320px;
-                margin: 30px auto;
+                max-width: 220px;
+                margin: 20px auto;
             }
 
             .product-image img {
-                max-width: 320px;
+                max-width: 220px;
             }
 
             .guarantee-seal {
-                width: 95px;
-                height: 95px;
-                top: -18px;
-                right: -18px;
-                border: 5px solid white;
+                width: 70px;
+                height: 70px;
+                top: -12px;
+                right: -12px;
+                border: 3px solid white;
             }
 
             .guarantee-seal .days {
-                font-size: 34px;
+                font-size: 22px;
             }
 
             .guarantee-seal .text {
-                font-size: 10px;
+                font-size: 8px;
             }
 
             .benefits {
-                max-width: 450px;
-                margin: 35px auto;
+                max-width: 300px;
+                margin: 20px auto;
             }
 
             .benefit-item {
-                font-size: 17px;
-                margin: 16px 0;
+                font-size: 13px;
+                margin: 10px 0;
             }
 
             .benefit-item::before {
-                width: 28px;
-                height: 28px;
+                width: 22px;
+                height: 22px;
             }
 
             .cta-button {
-                font-size: 20px;
-                padding: 20px 60px;
-                margin-top: 30px;
+                font-size: 15px;
+                padding: 12px 35px;
+                margin-top: 15px;
             }
 
             .security {
-                font-size: 15px;
-                margin-top: 25px;
-            }
-        }
-
-        /* DESKTOP GRANDE (1200px+) */
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 650px;
-                padding: 60px 50px;
-            }
-
-            h1 {
-                font-size: 38px;
-            }
-
-            .product-wrapper {
-                max-width: 340px;
-            }
-
-            .product-image img {
-                max-width: 340px;
+                font-size: 12px;
+                margin-top: 18px;
             }
         }
 
@@ -330,7 +311,6 @@
 
         <!-- PRODUTO COM SELO DE GARANTIA -->
         <div class="product-wrapper">
-            <!-- Selo de Garantia 30 dias -->
             <div class="guarantee-seal">
                 <div class="days">30</div>
                 <div class="text">Dias<br>Garantia</div>
@@ -348,9 +328,10 @@
             <div class="benefit-item">Acelera o metabolismo e aumenta energia</div>
             <div class="benefit-item">Melhora a saúde intestinal e digestão</div>
         </div>
-<p style="color:#555; font-size:14px; margin-top:15px; margin-bottom:8px;">
-    Você será redirecionado para a página oficial do fabricante 👇
-</p>
+
+        <p style="color:#555; font-size:14px; margin-top:15px; margin-bottom:8px;">
+            Você será redirecionado para a página oficial do fabricante 👇
+        </p>
 
         <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">
             QUERO CONHECER O OZEN VITTA →
@@ -360,9 +341,7 @@
     </div>
 
     <script>
-        // Rastrear clique no CTA (descomente quando adicionar o pixel)
         document.querySelector('.cta-button').addEventListener('click', function() {
-            // fbq('track', 'Lead');
             console.log('Clique no CTA registrado');
         });
     </script>
