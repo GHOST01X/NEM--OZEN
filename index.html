@@ -59,7 +59,10 @@
             margin-bottom: 15px;
         }
 
-        .highlight { color: #40B5AD; font-weight: bold; }
+        .highlight {
+            color: #40B5AD;
+            font-weight: bold;
+        }
 
         .subtitle {
             color: #666;
@@ -133,33 +136,42 @@
             font-weight: 700;
         }
 
+        /* Animações usadas nos novos blocos */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Bloco de benefícios reformulado */
         .benefits {
+            margin-top: 25px;
+        }
+
+        .benefits-title {
+            font-size: 20px;
+            font-weight: 800;
             text-align: left;
-            margin: 25px auto;
-            max-width: 350px;
+            color: #2B4C9C;
+            margin-bottom: 15px;
         }
 
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            margin: 12px 0;
+        .benefit-card {
+            background: #f7faff;
+            border-left: 5px solid #40B5AD;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: left;
+            animation: fadeIn 0.6s ease-in-out;
             font-size: 15px;
-            color: #333;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
         }
 
-        .benefit-item::before {
-            content: "✓";
-            background: linear-gradient(135deg, #40B5AD, #2B4C9C);
-            color: white;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-weight: bold;
-            flex-shrink: 0;
+        .benefit-card span {
+            margin-right: 8px;
+            font-size: 18px;
         }
 
         .cta-button {
@@ -186,13 +198,6 @@
             color: #666;
             font-size: 14px;
         }
-
-        /* Animação para novos blocos */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(12px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
     </style>
 </head>
 
@@ -201,9 +206,13 @@
 
         <div class="badge">🔥 LANÇAMENTO EXCLUSIVO</div>
 
-        <h1>Emagreça Sem Sofrimento<span class="highlight"> e Sem Passar Fome!</span></h1>
+        <h1>
+            Emagreça Sem Sofrimento<span class="highlight"> e Sem Passar Fome!</span>
+        </h1>
 
-        <p class="subtitle">Fórmula completa com 13 ativos naturais que aceleram seu metabolismo e controlam a fome</p>
+        <p class="subtitle">
+            Fórmula completa com 13 ativos naturais que auxiliam o metabolismo e o controle da fome.
+        </p>
 
         <img src="assets/logo.png" alt="Logo" class="logo">
 
@@ -218,76 +227,75 @@
             </div>
         </div>
 
-        <!-- NOVO BLOCO MAIS CHAMATIVO -->
+        <!-- BLOCO SOBRE DIFICULDADE -->
         <div style="
             background: linear-gradient(135deg, #ffffff, #eef3ff);
-            padding: 18px 20px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            margin: 28px auto;
-            max-width: 360px;
+            margin-top: 35px;
+            text-align:left;
             animation: fadeIn 0.7s ease-in-out;
         ">
-
-            <h2 style="
-                font-size: 20px;
-                font-weight: 900;
-                color: #2B4C9C;
-                margin-bottom: 12px;
-                text-align:left;
-                line-height:1.3;
-            ">
-                ❗ Por que tantas pessoas têm dificuldade para emagrecer?
+            <h2 style="color:#2B4C9C; font-size:20px; font-weight:900; margin-bottom:10px;">
+                ❗ Por que tanta gente tem dificuldade para emagrecer?
             </h2>
 
-            <p style="
-                font-size: 15px;
-                font-weight: 500;
-                color: #444;
-                margin-bottom: 12px;
-                line-height: 1.45;
-                text-align:left;
-            ">
-                Após os <strong>25 anos</strong>, o corpo passa por mudanças naturais que tornam a perda de peso mais lenta:
+            <p style="font-size:15px; color:#444; margin-bottom:12px;">
+                Após os <strong>25 anos</strong>, o organismo passa por mudanças naturais que dificultam os resultados:
             </p>
 
-            <ul style="
-                list-style:none;
-                padding-left:0;
-                text-align:left;
-                font-size: 15px;
-                font-weight:600;
-                color:#333;
-                line-height:1.5;
-            ">
-                <li style="margin-bottom:10px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">🐌</span> Metabolismo começa a desacelerar
+            <ul style="list-style:none; padding-left:0; font-size:15px; font-weight:600; color:#333; line-height:1.5;">
+                <li style="margin-bottom:8px; display:flex; align-items:center;">
+                    <span style="margin-right:8px;">🐌</span>
+                    Metabolismo começa a ficar mais lento
                 </li>
-
-                <li style="margin-bottom:10px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">🥠</span> Corpo passa a armazenar mais gordura
+                <li style="margin-bottom:8px; display:flex; align-items:center;">
+                    <span style="margin-right:8px;">🥠</span>
+                    O corpo armazena mais gordura do que antes
                 </li>
-
-                <li style="margin-bottom:10px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">😣</span> Mais fome emocional e ansiedade
+                <li style="margin-bottom:8px; display:flex; align-items:center;">
+                    <span style="margin-right:8px;">😣</span>
+                    Fome emocional e ansiedade atrapalham a rotina
                 </li>
-
-                <li style="margin-bottom:5px; display:flex; align-items:center;">
-                    <span style="margin-right:8px;">💧</span> Resultados lentos mesmo com dieta e esforço
+                <li style="margin-bottom:0; display:flex; align-items:center;">
+                    <span style="margin-right:8px;">💧</span>
+                    Dietas demoram mais para mostrar resultados
                 </li>
             </ul>
         </div>
 
         <!-- BENEFÍCIOS -->
         <div class="benefits">
-            <div class="benefit-item">Ajuda na queima de gordura localizada naturalmente</div>
-            <div class="benefit-item">Diminui a fome e controla a ansiedade</div>
-            <div class="benefit-item">Sem glúten e sem lactose</div>
-            <div class="benefit-item">Acelera o metabolismo e aumenta energia</div>
-            <div class="benefit-item">Melhora a saúde intestinal e digestão</div>
+            <div class="benefits-title">💚 Como o Ozen Vitta pode te ajudar?</div>
+
+            <div class="benefit-card">
+                <span>🔥</span>
+                Auxilia na queima de gordura localizada de forma natural
+            </div>
+
+            <div class="benefit-card">
+                <span>🍽️</span>
+                Ajuda no controle do apetite e na redução da compulsão
+            </div>
+
+            <div class="benefit-card">
+                <span>⚡</span>
+                Pode contribuir para mais energia e melhor disposição
+            </div>
+
+            <div class="benefit-card">
+                <span>🌿</span>
+                Sem glúten, sem lactose e com ativos naturais
+            </div>
+
+            <div class="benefit-card">
+                <span>🧠</span>
+                Pode ajudar no bem-estar e na redução do estresse alimentar
+            </div>
         </div>
 
-        <p style="color:#555; font-size:14px; margin-top:15px; margin-bottom:8px;">
+        <p style="color:#555; font-size:14px; margin-top:15px;">
             Você será redirecionado para a página oficial do fabricante 👇
         </p>
 
@@ -297,13 +305,6 @@
 
         <div class="security">🔒 Compra 100% segura e protegida</div>
     </div>
-
-    <script>
-        document.querySelector('.cta-button').addEventListener('click', function() {
-            console.log('Clique no CTA registrado');
-        });
-    </script>
 </body>
 </html>
-
 
