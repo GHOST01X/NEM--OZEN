@@ -141,7 +141,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Selo de cliente verificado */
         .verified-badge {
             display: inline-block;
             background: #40B5AD;
@@ -152,31 +151,6 @@
             margin-left: 6px;
         }
 
-        /* Carrossel */
-        .carousel {
-            width: 100%;
-            margin-top: 35px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .carousel-inner {
-            display: flex;
-            width: 400%;
-            animation: slide 16s infinite;
-        }
-
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            45% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            70% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            100% { transform: translateX(-300%); }
-        }
-
         .testimonial {
             width: 100%;
             padding: 15px;
@@ -185,7 +159,7 @@
             border-radius: 10px;
             text-align: left;
             font-size: 15px;
-            box-sizing: border-box;
+            margin-top: 15px;
             animation: fadeIn 0.6s ease;
         }
 
@@ -247,31 +221,26 @@
             </div>
         </div>
 
-        <!-- CARROSSEL DE DEPOIMENTOS -->
-        <div class="carousel">
-            <div class="carousel-inner">
+        <!-- DEPOIMENTOS FIXOS -->
+        
+        <div class="testimonial">
+            <strong>Talita, 33 <span class="verified-badge">Cliente verificado</span></strong><br>
+            "Comprei 3 potes e vou adquirir mais, estou super feliz com o resultado que tive!"
+        </div>
 
-                <div class="testimonial">
-                    <strong>Talita, 33 <span class="verified-badge">Cliente verificado</span></strong><br>
-                    "Comprei 3 potes e vou adquirir mais, estou super feliz com o resultado que tive!"
-                </div>
+        <div class="testimonial">
+            <strong>Thayna, 27 <span class="verified-badge">Cliente verificado</span></strong><br>
+            "A entrega foi mais rápida que imaginei, em 6 dias já estava na minha casa"
+        </div>
 
-                <div class="testimonial">
-                    <strong>Thayna, 27 <span class="verified-badge">Cliente verificado</span></strong><br>
-                    "A entrega foi mais rápida que imaginei, em 6 dias já estava na minha casa"
-                </div>
+        <div class="testimonial">
+            <strong>Carol, 30 <span class="verified-badge">Cliente verificado</span></strong><br>
+            "Mesmo morando em regiões afastadas, meu OzenVitta chegou certinho! Obrigada"
+        </div>
 
-                <div class="testimonial">
-                    <strong>Carol, 30 <span class="verified-badge">Cliente verificado</span></strong><br>
-                    "Mesmo morando em regiões afastadas, meu OzenVitta chegou certinho! Obrigada"
-                </div>
-
-                <div class="testimonial">
-                    <strong>Fátima, 59 <span class="verified-badge">Cliente verificado</span></strong><br>
-                    "Mesmo após a menopausa eu estou tendo muito resultado em pouco tempo! Muito feliz!"
-                </div>
-
-            </div>
+        <div class="testimonial">
+            <strong>Fátima, 59 <span class="verified-badge">Cliente verificado</span></strong><br>
+            "Mesmo após a menopausa eu estou tendo muito resultado em pouco tempo! Muito feliz!"
         </div>
 
         <p style="color:#555; font-size:14px; margin-top:15px;">
@@ -281,11 +250,6 @@
         <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">
             QUERO CONHECER O OZEN VITTA →
         </a>
-
-        <div class="security">🔒 Compra 100% segura e protegida</div>
-    </div>
-</body>
-</html>
 
         <div class="security">🔒 Compra 100% segura e protegida</div>
     </div>
