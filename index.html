@@ -4,8 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozen Vitta - Emagrecedor Natural</title>
 
-    <!-- COLE SEU PIXEL DO META AQUI -->
-
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -21,13 +19,23 @@
 
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 520px; /* AUMENTADO PARA DESKTOP */
             background: white;
             border-radius: 20px;
             padding: 30px 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             text-align: center;
             animation: fadeInContainer 0.7s ease-in-out;
+        }
+
+        /* 
+        FORÇA O LAYOUT A FICAR MAIS CONFORTÁVEL EM TELA GRANDE 
+        SEM PRECISAR DAR ZOOM
+        */
+        @media screen and (min-width: 1100px) {
+            .container {
+                transform: scale(1.25);
+            }
         }
 
         @keyframes fadeInContainer {
@@ -171,7 +179,6 @@
             font-size: 18px;
         }
 
-        /* Depoimentos */
         .testimonials {
             margin-top: 35px;
         }
