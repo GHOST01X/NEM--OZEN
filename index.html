@@ -1,234 +1,160 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ozen Vitta - Emagrecedor Natural</title>
-
-    <!-- COLE SEU PIXEL DO META AQUI -->
+    <title>Ozen Vitta - Emagrecimento Natural</title>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            color: #333;
             padding: 20px;
         }
 
         .container {
-            width: 100%;
-            max-width: 480px;
-            background: white;
-            border-radius: 20px;
-            padding: 30px 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 450px;
+            margin: 0 auto;
             text-align: center;
         }
 
         .badge {
-            display: inline-block;
-            background: linear-gradient(90deg, #40B5AD, #2B4C9C);
+            background: #ff4c4c;
             color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
+            display: inline-block;
+            padding: 6px 12px;
             font-weight: bold;
+            border-radius: 6px;
             margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            font-size: 14px;
         }
 
         h1 {
-            color: #2B4C9C;
-            font-size: 28px;
+            font-size: 26px;
             line-height: 1.3;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            color: #111;
+            font-weight: 900;
         }
 
-        .highlight { color: #40B5AD; font-weight: bold; }
+        .highlight {
+            color: #0a7d55;
+            font-weight: 900;
+        }
 
         .subtitle {
-            color: #666;
             font-size: 16px;
-            margin-bottom: 20px;
+            margin-top: 8px;
+            color: #444;
+            line-height: 1.4;
         }
 
         .logo {
-            max-width: 130px;
-            margin: 0 auto 20px auto;
-            display: block;
+            width: 200px;
+            margin: 20px auto;
         }
 
         .product-wrapper {
             position: relative;
-            max-width: 260px;
-            margin: 0 auto;
-        }
-
-        .product-image img {
-            width: 100%;
-            max-width: 260px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            margin-top: 20px;
         }
 
         .guarantee-seal {
             position: absolute;
-            top: -15px;
-            right: -15px;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
+            left: -10px;
+            top: -10px;
+            background: gold;
+            padding: 12px;
             border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #2B4C9C;
+            width: 70px;
+            height: 70px;
+            text-align: center;
             font-weight: bold;
-            box-shadow: 0 8px 25px rgba(255, 165, 0, 0.5);
-            border: 4px solid white;
-            z-index: 10;
-            animation: pulse-seal 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse-seal {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.05) rotate(5deg); }
+            font-size: 12px;
+            line-height: 1.2;
+            border: 2px solid #a67c00;
         }
 
         .guarantee-seal .days {
-            font-size: 28px;
-            line-height: 1;
+            font-size: 20px;
             font-weight: 900;
         }
 
-        .guarantee-seal .text {
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 3px;
-            font-weight: 700;
+        .product-image img {
+            width: 240px;
         }
 
         .benefits {
+            margin: 20px auto;
             text-align: left;
-            margin: 25px auto;
-            max-width: 350px;
         }
 
         .benefit-item {
-            display: flex;
-            align-items: center;
-            margin: 12px 0;
+            background: #f2f7f5;
+            border-left: 4px solid #0a7d55;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
             font-size: 15px;
-            color: #333;
-        }
-
-        .benefit-item::before {
-            content: "✓";
-            background: linear-gradient(135deg, #40B5AD, #2B4C9C);
-            color: white;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
             font-weight: bold;
-            flex-shrink: 0;
+            color: #0a4f39;
         }
 
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(90deg, #40B5AD, #2B4C9C);
+            display: block;
+            background: linear-gradient(to bottom, #00af63, #007b44);
             color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 16px 40px;
-            border-radius: 50px;
             text-decoration: none;
-            margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4);
-            transition: 0.3s;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 14px;
+            border-radius: 10px;
+            margin: 30px auto 10px auto;
+            max-width: 370px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.2);
+            transition: .2s;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(43, 76, 156, 0.6);
+            background: linear-gradient(to bottom, #07c46e, #006937);
+            transform: scale(1.03);
         }
 
         .security {
-            margin-top: 20px;
-            color: #666;
             font-size: 14px;
+            color: #666;
+            padding-top: 5px;
         }
 
-        @media (min-width: 768px) {
-            body { padding: 20px; }
-            .container { max-width: 420px; padding: 30px 25px; }
-            .badge { font-size: 13px; padding: 8px 18px; margin-bottom: 15px; }
-            h1 { font-size: 26px; margin-bottom: 12px; line-height: 1.3; }
-            .subtitle { font-size: 15px; margin-bottom: 20px; }
-            .logo { max-width: 120px; margin-bottom: 18px; }
-            .product-wrapper { max-width: 220px; margin: 20px auto; }
-            .product-image img { max-width: 220px; }
-            .guarantee-seal { width: 70px; height: 70px; top: -12px; right: -12px; border: 3px solid white; }
-            .guarantee-seal .days { font-size: 22px; }
-            .guarantee-seal .text { font-size: 8px; }
-            .benefits { max-width: 300px; margin: 20px auto; }
-            .benefit-item { font-size: 13px; margin: 10px 0; }
-            .benefit-item::before { width: 22px; height: 22px; }
-            .cta-button { font-size: 15px; padding: 12px 35px; margin-top: 15px; }
-            .security { font-size: 12px; margin-top: 18px; }
-        }
-
-        @media (max-width: 400px) {
-            .container { padding: 25px 18px; }
-            h1 { font-size: 24px; }
-            .guarantee-seal { width: 70px; height: 70px; top: -12px; right: -12px; }
-            .guarantee-seal .days { font-size: 24px; }
-            .guarantee-seal .text { font-size: 8px; }
+        ul li {
+            margin-bottom: 6px;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
 
         <div class="badge">🔥 LANÇAMENTO EXCLUSIVO</div>
 
-        <h1>Você já tentou dieta e exercícios e ainda sente que o peso não vai embora?</h1>
+        <h1>
+            Tentando emagrecer e não vê resultado?
+        </h1>
 
-        <p class="subtitle" style="margin-top: 10px;">
-            Não é falta de esforço. Muitas pessoas a partir dos 25 anos começam a sentir o metabolismo desacelerar, dificultando a perda de peso mesmo fazendo tudo certo.
+        <p class="subtitle">
+            Não é sua culpa. Após os 25 anos o metabolismo desacelera e o corpo passa a armazenar mais gordura mesmo com dieta e exercício.
         </p>
 
         <img src="assets/logo.png" alt="Logo" class="logo">
 
-        <h1 style="font-size: 23px; margin-top: 20px;">
+        <h1>
             Conheça o <span class="highlight">Ozen Vitta</span>
         </h1>
 
         <p class="subtitle">
-            Um suplemento natural com 13 ativos que apoiam o metabolismo, auxiliam na digestão e ajudam no controle da fome — sem sofrimento e sem medidas extremas.
+            Um suplemento natural com 13 ativos que ajudam seu corpo a queimar gordura de forma inteligente e gradual, sem sacrifícios exagerados.
         </p>
 
         <div class="product-wrapper">
@@ -236,64 +162,64 @@
                 <div class="days">30</div>
                 <div class="text">Dias<br>Garantia</div>
             </div>
-
             <div class="product-image">
                 <img src="assets/produto.png" alt="Ozen Vitta">
             </div>
         </div>
 
-        <div style="max-width: 350px; margin: 0 auto; text-align: left; margin-top: 20px;">
-            <p style="color:#333; font-size: 15px; margin-bottom: 10px; font-weight: bold;">
-                Por que tantas pessoas têm dificuldade para emagrecer?
-            </p>
-            <p style="color:#555; font-size: 14px; margin-bottom: 15px;">
-                Após os 25 anos, o corpo tende a:
+        <div style="text-align:left; max-width:380px; margin:20px auto 0 auto;">
+            <h2 style="font-size:18px; font-weight:900; color:#111; margin-bottom:8px;">
+                Por que muitas mulheres não emagrecem mesmo se esforçando?
+            </h2>
+
+            <p style="font-size:15px; color:#444; margin-bottom:10px;">
+                O metabolismo passa a funcionar mais devagar, o que pode causar:
             </p>
 
-            <ul style="padding-left: 15px; color: #444; font-size: 14px;">
-                <li>Reduzir o ritmo do metabolismo</li>
-                <li>Aumentar reservas de gordura</li>
-                <li>Gerar mais fome emocional</li>
-                <li>Responder mais lentamente a dietas</li>
+            <ul style="font-size:15px; color:#444;">
+                <li>Menos energia</li>
+                <li>Queima de gordura mais lenta</li>
+                <li>Mais apetite e ansiedade</li>
+                <li>Resultados demorados mesmo fazendo tudo certo</li>
             </ul>
         </div>
 
-        <div style="max-width: 350px; margin: 20px auto 10px auto; text-align: left;">
-            <p style="color:#333; font-size: 15px; margin-bottom: 10px; font-weight: bold;">
-                Como o Ozen Vitta atua?
-            </p>
+        <div style="text-align:left; max-width:380px; margin:20px auto;">
+            <h2 style="font-size:18px; font-weight:900; color:#111; margin-bottom:8px;">
+                O que o Ozen Vitta faz?
+            </h2>
 
-            <p style="color:#555; font-size: 14px; margin-bottom: 10px;">
-                Sua fórmula combina fibras, vitaminas e nutrientes que juntos podem:
+            <p style="font-size:15px; color:#444;">
+                Sua combinação de fibras, vitaminas e compostos 100% naturais:
             </p>
         </div>
 
         <div class="benefits">
-            <div class="benefit-item">Apoiar o metabolismo natural</div>
-            <div class="benefit-item">Ajudar no controle do apetite</div>
-            <div class="benefit-item">Melhorar digestão e funcionamento intestinal</div>
-            <div class="benefit-item">Aumentar disposição no dia a dia</div>
-            <div class="benefit-item">Auxiliar na redução gradual de gordura</div>
+            <div class="benefit-item">Acelera o metabolismo naturalmente 🍃</div>
+            <div class="benefit-item">Reduz a fome emocional e compulsão</div>
+            <div class="benefit-item">Melhora a digestão e intestino</div>
+            <div class="benefit-item">Aumenta disposição e energia</div>
+            <div class="benefit-item">Auxilia na queima gradual de gordura</div>
         </div>
 
-        <p style="color:#333; font-size: 15px; font-weight: bold; margin-top: 20px;">
-            Se você quer recomeçar com uma solução mais inteligente, essa pode ser sua chance.
+        <p style="font-size:16px; font-weight:900; margin-top:20px; color:#222;">
+            Não precisa sofrer em silêncio. Seu corpo pode reagir melhor.
         </p>
 
-        <p style="color:#555; font-size:14px; margin-top:10px;">
-            Ao continuar, você será direcionado(a) para a página oficial do fabricante 👇
+        <p style="font-size:14px; color:#555; margin-top:10px;">
+            Ao continuar, você será direcionado(a) para o site oficial do fabricante 👇
         </p>
 
         <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">
             QUERO CONHECER O OZEN VITTA →
         </a>
 
-        <div class="security">🔒 Compra 100% segura e protegida</div>
+        <div class="security">🔒 Compra 100% segura e aprovada</div>
     </div>
 
     <script>
         document.querySelector('.cta-button').addEventListener('click', function() {
-            console.log('Clique no CTA registrado');
+            console.log('Clique registrado');
         });
     </script>
 </body>
