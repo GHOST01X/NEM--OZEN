@@ -47,6 +47,15 @@
             animation: fadeInContainer 0.7s ease-in-out;
         }
 
+        @media screen and (min-width: 768px) {
+            body { padding: 30px; }
+            .container { padding: 35px 30px; max-width: 580px; }
+        }
+
+        @media screen and (min-width: 1100px) {
+            .container { transform: scale(1.15); margin: 40px auto; }
+        }
+
         @keyframes fadeInContainer {
             0% { opacity: 0; transform: translateY(25px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -64,6 +73,10 @@
             animation: pulse 2s infinite;
         }
 
+        @media screen and (min-width: 768px) {
+            .badge { font-size: 14px; padding: 10px 24px; }
+        }
+
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -76,41 +89,41 @@
             margin-bottom: 12px;
         }
 
+        @media screen and (min-width: 768px) {
+            h1 { font-size: 30px; margin-bottom: 15px; }
+        }
+
         .highlight { color: #40B5AD; font-weight: bold; }
         .subtitle { color: #666; font-size: 15px; margin-bottom: 18px; line-height: 1.5; }
 
-        .logo-placeholder {
-            width: 110px;
-            height: 50px;
-            background: linear-gradient(135deg, #40B5AD, #2B4C9C);
-            border-radius: 10px;
-            margin: 0 auto 18px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 12px;
+        @media screen and (min-width: 768px) {
+            .subtitle { font-size: 17px; margin-bottom: 22px; }
+        }
+
+        .logo { max-width: 110px; margin: 0 auto 18px auto; display: block; }
+
+        @media screen and (min-width: 768px) {
+            .logo { max-width: 140px; margin-bottom: 22px; }
         }
 
         .product-wrapper { position: relative; max-width: 240px; margin: 0 auto; }
 
-        .product-placeholder {
-            width: 200px;
-            height: 220px;
-            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-            border-radius: 15px;
+        @media screen and (min-width: 768px) {
+            .product-wrapper { max-width: 280px; }
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 240px;
+            height: auto;
+            display: block;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2B4C9C;
-            font-weight: bold;
-            font-size: 14px;
-            text-align: center;
-            padding: 15px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
             animation: float 3s ease-in-out infinite;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        @media screen and (min-width: 768px) {
+            .product-image img { max-width: 280px; }
         }
 
         @keyframes float {
@@ -121,7 +134,7 @@
         .guarantee-seal {
             position: absolute;
             top: -12px;
-            right: 15px;
+            right: -12px;
             width: 70px;
             height: 70px;
             background: linear-gradient(135deg, #FFD700, #FFA500);
@@ -138,6 +151,10 @@
             animation: pulse-seal 3s ease-in-out infinite;
         }
 
+        @media screen and (min-width: 768px) {
+            .guarantee-seal { width: 85px; height: 85px; top: -15px; right: -15px; border-width: 4px; }
+        }
+
         @keyframes pulse-seal {
             0%, 100% { transform: scale(1) rotate(0deg); }
             50% { transform: scale(1.05) rotate(5deg); }
@@ -145,6 +162,11 @@
 
         .guarantee-seal .days { font-size: 24px; line-height: 1; font-weight: 900; }
         .guarantee-seal .text { font-size: 8px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; font-weight: 700; }
+
+        @media screen and (min-width: 768px) {
+            .guarantee-seal .days { font-size: 28px; }
+            .guarantee-seal .text { font-size: 9px; margin-top: 3px; }
+        }
 
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(12px); }
@@ -161,6 +183,10 @@
             animation: fadeIn 0.7s ease-in-out;
         }
 
+        @media screen and (min-width: 768px) {
+            .pain-block { padding: 22px 20px; margin-top: 32px; }
+        }
+
         .pain-block h3 {
             color: #c0392b;
             font-size: 17px;
@@ -169,10 +195,18 @@
             line-height: 1.4;
         }
 
+        @media screen and (min-width: 768px) {
+            .pain-block h3 { font-size: 19px; }
+        }
+
         .pain-block p {
             color: #555;
             font-size: 14px;
             line-height: 1.6;
+        }
+
+        @media screen and (min-width: 768px) {
+            .pain-block p { font-size: 15px; }
         }
 
         .difficulty-block {
@@ -185,6 +219,10 @@
             animation: fadeIn 0.7s ease-in-out;
         }
 
+        @media screen and (min-width: 768px) {
+            .difficulty-block { padding: 22px 20px; margin-top: 30px; }
+        }
+
         .difficulty-block h2 {
             color: #2B4C9C;
             font-size: 17px;
@@ -192,10 +230,18 @@
             margin-bottom: 10px;
         }
 
+        @media screen and (min-width: 768px) {
+            .difficulty-block h2 { font-size: 20px; }
+        }
+
         .difficulty-block > p {
             font-size: 14px;
             color: #444;
             margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .difficulty-block > p { font-size: 15px; }
         }
 
         .difficulty-list {
@@ -205,6 +251,10 @@
             font-weight: 600;
             color: #333;
             line-height: 1.5;
+        }
+
+        @media screen and (min-width: 768px) {
+            .difficulty-list { font-size: 15px; }
         }
 
         .difficulty-list li {
@@ -218,12 +268,20 @@
 
         .benefits { margin-top: 25px; }
 
+        @media screen and (min-width: 768px) {
+            .benefits { margin-top: 30px; }
+        }
+
         .benefits-title {
             font-size: 18px;
             font-weight: 800;
             text-align: left;
             color: #2B4C9C;
             margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .benefits-title { font-size: 20px; margin-bottom: 15px; }
         }
 
         .benefit-card {
@@ -239,7 +297,15 @@
             align-items: flex-start;
         }
 
+        @media screen and (min-width: 768px) {
+            .benefit-card { padding: 12px 15px; margin: 10px 0; font-size: 15px; border-left-width: 5px; }
+        }
+
         .benefit-card span { margin-right: 8px; font-size: 16px; }
+
+        @media screen and (min-width: 768px) {
+            .benefit-card span { font-size: 18px; }
+        }
 
         .cta-button {
             display: inline-block;
@@ -255,6 +321,10 @@
             transition: 0.3s;
             animation: pulseBtn 2s infinite;
             cursor: pointer;
+        }
+
+        @media screen and (min-width: 768px) {
+            .cta-button { font-size: 18px; padding: 16px 40px; margin-top: 22px; }
         }
 
         .cta-button:hover {
@@ -277,11 +347,19 @@
             animation: fadeIn 0.7s ease;
         }
 
+        @media screen and (min-width: 768px) {
+            .mid-cta { padding: 22px 20px; margin-top: 30px; }
+        }
+
         .mid-cta p {
             color: #2B4C9C;
             font-weight: 700;
             font-size: 15px;
             margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .mid-cta p { font-size: 16px; }
         }
 
         .urgency-bar {
@@ -299,9 +377,17 @@
             animation: fadeIn 0.7s ease;
         }
 
+        @media screen and (min-width: 768px) {
+            .urgency-bar { font-size: 14px; padding: 14px 18px; margin-top: 30px; }
+        }
+
         .urgency-bar span { font-size: 16px; }
 
         .testimonials { margin-top: 25px; }
+
+        @media screen and (min-width: 768px) {
+            .testimonials { margin-top: 32px; }
+        }
 
         .testimonial-title {
             font-size: 18px;
@@ -309,6 +395,10 @@
             color: #2B4C9C;
             text-align: left;
             margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .testimonial-title { font-size: 20px; margin-bottom: 15px; }
         }
 
         .testimonial-card {
@@ -323,6 +413,10 @@
             font-size: 14px;
         }
 
+        @media screen and (min-width: 768px) {
+            .testimonial-card { padding: 15px; margin-bottom: 15px; font-size: 15px; border-left-width: 5px; }
+        }
+
         .testimonial-card strong { color: #2B4C9C; font-weight: 700; }
 
         .redirect-text {
@@ -331,7 +425,15 @@
             margin-top: 15px;
         }
 
+        @media screen and (min-width: 768px) {
+            .redirect-text { font-size: 14px; }
+        }
+
         .security { margin-top: 18px; color: #666; font-size: 13px; }
+
+        @media screen and (min-width: 768px) {
+            .security { margin-top: 20px; font-size: 14px; }
+        }
     </style>
 </head>
 
@@ -343,14 +445,16 @@
 
         <p class="subtitle">Fórmula completa com 13 ativos naturais que auxiliam o metabolismo e o controle da fome.</p>
 
-        <div class="logo-placeholder">LOGO</div>
+        <img src="assets/logo.png" alt="Logo" class="logo">
 
         <div class="product-wrapper">
             <div class="guarantee-seal">
                 <div class="days">30</div>
                 <div class="text">Dias<br>Garantia</div>
             </div>
-            <div class="product-placeholder">📦 IMAGEM DO PRODUTO<br>(assets/produto.png)</div>
+            <div class="product-image">
+                <img src="assets/produto.png" alt="Ozen Vitta">
+            </div>
         </div>
 
         <div class="pain-block">
