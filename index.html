@@ -1,3 +1,4 @@
+<index.html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +33,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 15px;
         }
 
         .container {
@@ -40,16 +41,10 @@
             max-width: 520px;
             background: white;
             border-radius: 20px;
-            padding: 30px 20px;
+            padding: 25px 18px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             text-align: center;
             animation: fadeInContainer 0.7s ease-in-out;
-        }
-
-        @media screen and (min-width: 1100px) {
-            .container {
-                transform: scale(1.25);
-            }
         }
 
         @keyframes fadeInContainer {
@@ -63,9 +58,9 @@
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             animation: pulse 2s infinite;
         }
 
@@ -76,24 +71,46 @@
 
         h1 {
             color: #2B4C9C;
-            font-size: 28px;
+            font-size: 24px;
             line-height: 1.3;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .highlight { color: #40B5AD; font-weight: bold; }
-        .subtitle { color: #666; font-size: 16px; margin-bottom: 20px; }
-        .logo { max-width: 130px; margin: 0 auto 20px auto; display: block; }
-        .product-wrapper { position: relative; max-width: 260px; margin: 0 auto; }
+        .subtitle { color: #666; font-size: 15px; margin-bottom: 18px; line-height: 1.5; }
 
-        .product-image img {
-            width: 100%;
-            max-width: 260px;
-            height: auto;
-            display: block;
+        .logo-placeholder {
+            width: 110px;
+            height: 50px;
+            background: linear-gradient(135deg, #40B5AD, #2B4C9C);
+            border-radius: 10px;
+            margin: 0 auto 18px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .product-wrapper { position: relative; max-width: 240px; margin: 0 auto; }
+
+        .product-placeholder {
+            width: 200px;
+            height: 220px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 15px;
             margin: 0 auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2B4C9C;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            padding: 15px;
             animation: float 3s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         @keyframes float {
@@ -103,10 +120,10 @@
 
         .guarantee-seal {
             position: absolute;
-            top: -15px;
-            right: -15px;
-            width: 80px;
-            height: 80px;
+            top: -12px;
+            right: 15px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, #FFD700, #FFA500);
             border-radius: 50%;
             display: flex;
@@ -116,7 +133,7 @@
             color: #2B4C9C;
             font-weight: bold;
             box-shadow: 0 8px 25px rgba(255, 165, 0, 0.5);
-            border: 4px solid white;
+            border: 3px solid white;
             z-index: 10;
             animation: pulse-seal 3s ease-in-out infinite;
         }
@@ -126,59 +143,118 @@
             50% { transform: scale(1.05) rotate(5deg); }
         }
 
-        .guarantee-seal .days { font-size: 28px; line-height: 1; font-weight: 900; }
-        .guarantee-seal .text { font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; font-weight: 700; }
+        .guarantee-seal .days { font-size: 24px; line-height: 1; font-weight: 900; }
+        .guarantee-seal .text { font-size: 8px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; font-weight: 700; }
 
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(12px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
+        .pain-block {
+            background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+            border: 2px solid #ffcccc;
+            padding: 18px 15px;
+            border-radius: 15px;
+            margin-top: 28px;
+            text-align: center;
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        .pain-block h3 {
+            color: #c0392b;
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .pain-block p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .difficulty-block {
+            background: linear-gradient(135deg, #ffffff, #eef3ff);
+            padding: 18px 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin-top: 25px;
+            text-align: left;
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        .difficulty-block h2 {
+            color: #2B4C9C;
+            font-size: 17px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .difficulty-block > p {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .difficulty-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .difficulty-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .difficulty-list li:last-child { margin-bottom: 0; }
+        .difficulty-list li span { margin-right: 8px; }
+
         .benefits { margin-top: 25px; }
-        .benefits-title { font-size: 20px; font-weight: 800; text-align: left; color: #2B4C9C; margin-bottom: 15px; }
+
+        .benefits-title {
+            font-size: 18px;
+            font-weight: 800;
+            text-align: left;
+            color: #2B4C9C;
+            margin-bottom: 12px;
+        }
 
         .benefit-card {
             background: #f7faff;
-            border-left: 5px solid #40B5AD;
-            padding: 12px 15px;
-            margin: 10px 0;
+            border-left: 4px solid #40B5AD;
+            padding: 11px 13px;
+            margin: 8px 0;
             border-radius: 10px;
             text-align: left;
             animation: fadeIn 0.6s ease-in-out;
-            font-size: 15px;
+            font-size: 14px;
             display: flex;
             align-items: flex-start;
         }
 
-        .benefit-card span { margin-right: 8px; font-size: 18px; }
-        .testimonials { margin-top: 35px; }
-        .testimonial-title { font-size: 20px; font-weight: 800; color: #2B4C9C; text-align: left; margin-bottom: 15px; }
-
-        .testimonial-card {
-            background: #ffffff;
-            border-left: 5px solid #2B4C9C;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            text-align: left;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            animation: fadeIn 0.7s ease;
-        }
-
-        .testimonial-card strong { color: #2B4C9C; font-weight: 700; }
+        .benefit-card span { margin-right: 8px; font-size: 16px; }
 
         .cta-button {
             display: inline-block;
             background: linear-gradient(90deg, #40B5AD, #2B4C9C);
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-            padding: 16px 40px;
+            padding: 14px 30px;
             border-radius: 50px;
             text-decoration: none;
-            margin-top: 20px;
+            margin-top: 18px;
             box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4);
             transition: 0.3s;
+            animation: pulseBtn 2s infinite;
+            cursor: pointer;
         }
 
         .cta-button:hover {
@@ -186,7 +262,76 @@
             box-shadow: 0 15px 40px rgba(43, 76, 156, 0.6);
         }
 
-        .security { margin-top: 20px; color: #666; font-size: 14px; }
+        @keyframes pulseBtn {
+            0%, 100% { box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4); }
+            50% { box-shadow: 0 10px 40px rgba(43, 76, 156, 0.7); }
+        }
+
+        .mid-cta {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border: 2px dashed #40B5AD;
+            border-radius: 15px;
+            padding: 18px 15px;
+            margin-top: 25px;
+            text-align: center;
+            animation: fadeIn 0.7s ease;
+        }
+
+        .mid-cta p {
+            color: #2B4C9C;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .urgency-bar {
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-top: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            animation: fadeIn 0.7s ease;
+        }
+
+        .urgency-bar span { font-size: 16px; }
+
+        .testimonials { margin-top: 25px; }
+
+        .testimonial-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #2B4C9C;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            border-left: 4px solid #2B4C9C;
+            padding: 13px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            text-align: left;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            animation: fadeIn 0.7s ease;
+            font-size: 14px;
+        }
+
+        .testimonial-card strong { color: #2B4C9C; font-weight: 700; }
+
+        .redirect-text {
+            color: #555;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .security { margin-top: 18px; color: #666; font-size: 13px; }
     </style>
 </head>
 
@@ -198,26 +343,29 @@
 
         <p class="subtitle">Fórmula completa com 13 ativos naturais que auxiliam o metabolismo e o controle da fome.</p>
 
-        <img src="assets/logo.png" alt="Logo" class="logo">
+        <div class="logo-placeholder">LOGO</div>
 
         <div class="product-wrapper">
             <div class="guarantee-seal">
                 <div class="days">30</div>
                 <div class="text">Dias<br>Garantia</div>
             </div>
-            <div class="product-image">
-                <img src="assets/produto.png" alt="Ozen Vitta">
-            </div>
+            <div class="product-placeholder">📦 IMAGEM DO PRODUTO<br>(assets/produto.png)</div>
         </div>
 
-        <div style="background: linear-gradient(135deg, #ffffff, #eef3ff); padding: 20px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); margin-top: 35px; text-align:left; animation: fadeIn 0.7s ease-in-out;">
-            <h2 style="color:#2B4C9C; font-size:20px; font-weight:900; margin-bottom:10px;">❗ Por que tanta gente tem dificuldade para emagrecer?</h2>
-            <p style="font-size:15px; color:#444; margin-bottom:12px;">Após os <strong>25 anos</strong>, o organismo passa por mudanças naturais que dificultam os resultados:</p>
-            <ul style="list-style:none; padding-left:0; font-size:15px; font-weight:600; color:#333; line-height:1.5;">
-                <li style="margin-bottom:8px; display:flex; align-items:center;"><span style="margin-right:8px;">🐌</span> Metabolismo começa a ficar mais lento</li>
-                <li style="margin-bottom:8px; display:flex; align-items:center;"><span style="margin-right:8px;">🥠</span> O corpo armazena mais gordura do que antes</li>
-                <li style="margin-bottom:8px; display:flex; align-items:center;"><span style="margin-right:8px;">😣</span> Fome emocional e ansiedade atrapalham a rotina</li>
-                <li style="margin-bottom:0; display:flex; align-items:center;"><span style="margin-right:8px;">💧</span> Dietas demoram mais para mostrar resultados</li>
+        <div class="pain-block">
+            <h3>😔 Você já tentou de tudo e nada funciona?</h3>
+            <p>Dietas restritivas, exercícios exaustivos, chás milagrosos... e o peso continua o mesmo? <strong>Você não está sozinha.</strong> O problema pode não ser falta de esforço, mas sim o que está faltando no seu organismo.</p>
+        </div>
+
+        <div class="difficulty-block">
+            <h2>❗ Por que tanta gente tem dificuldade para emagrecer?</h2>
+            <p>Após os <strong>25 anos</strong>, o organismo passa por mudanças naturais que dificultam os resultados:</p>
+            <ul class="difficulty-list">
+                <li><span>🐌</span> Metabolismo começa a ficar mais lento</li>
+                <li><span>🥠</span> O corpo armazena mais gordura do que antes</li>
+                <li><span>😣</span> Fome emocional e ansiedade atrapalham a rotina</li>
+                <li><span>💧</span> Dietas demoram mais para mostrar resultados</li>
             </ul>
         </div>
 
@@ -230,6 +378,15 @@
             <div class="benefit-card"><span>🧠</span> Pode ajudar no bem-estar e na redução do estresse alimentar</div>
         </div>
 
+        <div class="mid-cta">
+            <p>👇 Gostou? Clique e conheça o Ozen Vitta agora!</p>
+            <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">QUERO EMAGRECER DE VERDADE →</a>
+        </div>
+
+        <div class="urgency-bar">
+            <span>⏰</span> Oferta por tempo limitado — Enquanto durarem os estoques!
+        </div>
+
         <div class="testimonials">
             <div class="testimonial-title">💬 Resultados de quem já usou</div>
             <div class="testimonial-card"><strong>Talita, 33 anos</strong><br>"Comprei 3 potes e vou adquirir mais, estou super feliz com o resultado que tive!"</div>
@@ -238,7 +395,7 @@
             <div class="testimonial-card"><strong>Fátima, 59 anos</strong><br>"Mesmo após a menopausa eu estou tendo muito resultado em pouco tempo! Muito feliz!"</div>
         </div>
 
-        <p style="color:#555; font-size:14px; margin-top:15px;">Você será redirecionado para a página oficial do fabricante 👇</p>
+        <p class="redirect-text">Você será redirecionado para a página oficial do fabricante 👇</p>
 
         <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button">QUERO CONHECER O OZEN VITTA →</a>
 
