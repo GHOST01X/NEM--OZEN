@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ozen Vitta - Emagrecedor Natural</title>
+    <title>Protocolo de Emagrecimento Acelerado</title>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -24,486 +24,417 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 20px;
         }
 
         .container {
-            width: 100%;
-            max-width: 520px;
             background: white;
-            border-radius: 20px;
-            padding: 25px 18px;
+            border-radius: 24px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
-            animation: fadeInContainer 0.7s ease-in-out;
-        }
-
-        @media screen and (min-width: 768px) {
-            body { padding: 30px; }
-            .container { padding: 35px 30px; max-width: 580px; }
-        }
-
-        @media screen and (min-width: 1100px) {
-            .container { transform: scale(1.15); margin: 40px auto; }
-        }
-
-        @keyframes fadeInContainer {
-            0% { opacity: 0; transform: translateY(25px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .badge {
-            display: inline-block;
-            background: linear-gradient(90deg, #40B5AD, #2B4C9C);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 18px;
-            animation: pulse 2s infinite;
-        }
-
-        @media screen and (min-width: 768px) {
-            .badge { font-size: 14px; padding: 10px 24px; }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        h1 {
-            color: #2B4C9C;
-            font-size: 24px;
-            line-height: 1.3;
-            margin-bottom: 12px;
-        }
-
-        @media screen and (min-width: 768px) {
-            h1 { font-size: 30px; margin-bottom: 15px; }
-        }
-
-        .highlight { color: #40B5AD; font-weight: bold; }
-        .subtitle { color: #666; font-size: 15px; margin-bottom: 18px; line-height: 1.5; }
-
-        @media screen and (min-width: 768px) {
-            .subtitle { font-size: 17px; margin-bottom: 22px; }
-        }
-
-        .logo { max-width: 110px; margin: 0 auto 18px auto; display: block; }
-
-        @media screen and (min-width: 768px) {
-            .logo { max-width: 140px; margin-bottom: 22px; }
-        }
-
-        .product-wrapper { position: relative; max-width: 240px; margin: 0 auto; }
-
-        @media screen and (min-width: 768px) {
-            .product-wrapper { max-width: 280px; }
-        }
-
-        .product-image img {
+            max-width: 600px;
             width: 100%;
-            max-width: 240px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
-            animation: float 3s ease-in-out infinite;
+            overflow: hidden;
         }
 
-        @media screen and (min-width: 768px) {
-            .product-image img { max-width: 280px; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .guarantee-seal {
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #2B4C9C;
-            font-weight: bold;
-            box-shadow: 0 8px 25px rgba(255, 165, 0, 0.5);
-            border: 3px solid white;
-            z-index: 10;
-            animation: pulse-seal 3s ease-in-out infinite;
-        }
-
-        @media screen and (min-width: 768px) {
-            .guarantee-seal { width: 85px; height: 85px; top: -15px; right: -15px; border-width: 4px; }
-        }
-
-        @keyframes pulse-seal {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.05) rotate(5deg); }
-        }
-
-        .guarantee-seal .days { font-size: 24px; line-height: 1; font-weight: 900; }
-        .guarantee-seal .text { font-size: 8px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; font-weight: 700; }
-
-        @media screen and (min-width: 768px) {
-            .guarantee-seal .days { font-size: 28px; }
-            .guarantee-seal .text { font-size: 9px; margin-top: 3px; }
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(12px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .pain-block {
-            background: linear-gradient(135deg, #fff5f5, #ffe8e8);
-            border: 2px solid #ffcccc;
-            padding: 18px 15px;
-            border-radius: 15px;
-            margin-top: 28px;
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 40px;
             text-align: center;
-            animation: fadeIn 0.7s ease-in-out;
+            color: white;
         }
 
-        @media screen and (min-width: 768px) {
-            .pain-block { padding: 22px 20px; margin-top: 32px; }
-        }
-
-        .pain-block h3 {
-            color: #c0392b;
-            font-size: 17px;
+        .header h1 {
+            font-size: 32px;
             font-weight: 800;
-            margin-bottom: 10px;
-            line-height: 1.4;
+            line-height: 1.2;
+            margin-bottom: 16px;
         }
 
-        @media screen and (min-width: 768px) {
-            .pain-block h3 { font-size: 19px; }
-        }
-
-        .pain-block p {
-            color: #555;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        @media screen and (min-width: 768px) {
-            .pain-block p { font-size: 15px; }
-        }
-
-        .difficulty-block {
-            background: linear-gradient(135deg, #ffffff, #eef3ff);
-            padding: 18px 15px;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            margin-top: 25px;
-            text-align: left;
-            animation: fadeIn 0.7s ease-in-out;
-        }
-
-        @media screen and (min-width: 768px) {
-            .difficulty-block { padding: 22px 20px; margin-top: 30px; }
-        }
-
-        .difficulty-block h2 {
-            color: #2B4C9C;
-            font-size: 17px;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .difficulty-block h2 { font-size: 20px; }
-        }
-
-        .difficulty-block > p {
-            font-size: 14px;
-            color: #444;
-            margin-bottom: 12px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .difficulty-block > p { font-size: 15px; }
-        }
-
-        .difficulty-list {
-            list-style: none;
-            padding-left: 0;
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
             line-height: 1.5;
         }
 
-        @media screen and (min-width: 768px) {
-            .difficulty-list { font-size: 15px; }
+        .progress-bar {
+            height: 6px;
+            background: #f0f0f0;
+            position: relative;
         }
 
-        .difficulty-list li {
-            margin-bottom: 8px;
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .question-container {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .question-container.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .question-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .options {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .difficulty-list li:last-child { margin-bottom: 0; }
-        .difficulty-list li span { margin-right: 8px; }
-
-        .benefits { margin-top: 25px; }
-
-        @media screen and (min-width: 768px) {
-            .benefits { margin-top: 30px; }
-        }
-
-        .benefits-title {
-            font-size: 18px;
-            font-weight: 800;
-            text-align: left;
-            color: #2B4C9C;
-            margin-bottom: 12px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .benefits-title { font-size: 20px; margin-bottom: 15px; }
-        }
-
-        .benefit-card {
-            background: #f7faff;
-            border-left: 4px solid #40B5AD;
-            padding: 11px 13px;
-            margin: 8px 0;
-            border-radius: 10px;
-            text-align: left;
-            animation: fadeIn 0.6s ease-in-out;
-            font-size: 14px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        @media screen and (min-width: 768px) {
-            .benefit-card { padding: 12px 15px; margin: 10px 0; font-size: 15px; border-left-width: 5px; }
-        }
-
-        .benefit-card span { margin-right: 8px; font-size: 16px; }
-
-        @media screen and (min-width: 768px) {
-            .benefit-card span { font-size: 18px; }
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(90deg, #40B5AD, #2B4C9C);
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 14px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 18px;
-            box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4);
-            transition: 0.3s;
-            animation: pulseBtn 2s infinite;
+        .option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 18px 24px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 500;
+            color: #495057;
         }
 
-        @media screen and (min-width: 768px) {
-            .cta-button { font-size: 18px; padding: 16px 40px; margin-top: 22px; }
+        .option:hover {
+            background: #e9ecef;
+            border-color: #667eea;
+            transform: translateX(4px);
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(43, 76, 156, 0.6);
-        }
-
-        @keyframes pulseBtn {
-            0%, 100% { box-shadow: 0 10px 30px rgba(43, 76, 156, 0.4); }
-            50% { box-shadow: 0 10px 40px rgba(43, 76, 156, 0.7); }
-        }
-
-        .mid-cta {
-            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-            border: 2px dashed #40B5AD;
-            border-radius: 15px;
-            padding: 18px 15px;
-            margin-top: 25px;
-            text-align: center;
-            animation: fadeIn 0.7s ease;
-        }
-
-        @media screen and (min-width: 768px) {
-            .mid-cta { padding: 22px 20px; margin-top: 30px; }
-        }
-
-        .mid-cta p {
-            color: #2B4C9C;
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 12px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .mid-cta p { font-size: 16px; }
-        }
-
-        .urgency-bar {
-            background: linear-gradient(90deg, #e74c3c, #c0392b);
+        .option.selected {
+            background: #667eea;
+            border-color: #667eea;
             color: white;
-            padding: 12px 15px;
-            border-radius: 10px;
-            margin-top: 25px;
-            font-size: 13px;
-            font-weight: 700;
+        }
+
+        .loading-screen {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .loading-screen.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #f0f0f0;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .result-screen {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .result-screen.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin: 0 auto 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            animation: fadeIn 0.7s ease;
+            font-size: 48px;
         }
 
-        @media screen and (min-width: 768px) {
-            .urgency-bar { font-size: 14px; padding: 14px 18px; margin-top: 30px; }
-        }
-
-        .urgency-bar span { font-size: 16px; }
-
-        .testimonials { margin-top: 25px; }
-
-        @media screen and (min-width: 768px) {
-            .testimonials { margin-top: 32px; }
-        }
-
-        .testimonial-title {
-            font-size: 18px;
+        .result-title {
+            font-size: 28px;
             font-weight: 800;
-            color: #2B4C9C;
-            text-align: left;
-            margin-bottom: 12px;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
-        @media screen and (min-width: 768px) {
-            .testimonial-title { font-size: 20px; margin-bottom: 15px; }
+        .result-text {
+            font-size: 16px;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 40px;
         }
 
-        .testimonial-card {
-            background: #ffffff;
-            border-left: 4px solid #2B4C9C;
-            padding: 13px;
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
             border-radius: 12px;
-            margin-bottom: 12px;
-            text-align: left;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            animation: fadeIn 0.7s ease;
-            font-size: 14px;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
 
-        @media screen and (min-width: 768px) {
-            .testimonial-card { padding: 15px; margin-bottom: 15px; font-size: 15px; border-left-width: 5px; }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
         }
 
-        .testimonial-card strong { color: #2B4C9C; font-weight: 700; }
-
-        .redirect-text {
-            color: #555;
-            font-size: 13px;
-            margin-top: 15px;
+        .cta-button:active {
+            transform: translateY(0);
         }
 
-        @media screen and (min-width: 768px) {
-            .redirect-text { font-size: 14px; }
-        }
+        @media (max-width: 640px) {
+            .header {
+                padding: 40px 24px;
+            }
 
-        .security { margin-top: 18px; color: #666; font-size: 13px; }
+            .header h1 {
+                font-size: 26px;
+            }
 
-        @media screen and (min-width: 768px) {
-            .security { margin-top: 20px; font-size: 14px; }
+            .header p {
+                font-size: 15px;
+            }
+
+            .content {
+                padding: 40px 24px;
+            }
+
+            .question-title {
+                font-size: 20px;
+            }
+
+            .option {
+                padding: 16px 20px;
+                font-size: 15px;
+            }
+
+            .result-title {
+                font-size: 24px;
+            }
+
+            .cta-button {
+                padding: 18px 32px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <div class="badge">🔥 LANÇAMENTO EXCLUSIVO</div>
+        <div class="header">
+            <h1>Descubra se você é elegível para o Protocolo de Emagrecimento Acelerado</h1>
+            <p>Responda 4 perguntas rápidas e veja se o seu perfil é compatível com o método usado por milhares de mulheres.</p>
+        </div>
 
-        <h1>Emagreça Sem Sofrimento<span class="highlight"> e Sem Passar Fome!</span></h1>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
 
-        <p class="subtitle">Fórmula completa com 13 ativos naturais que auxiliam o metabolismo e o controle da fome.</p>
-
-        <img src="assets/logo.png" alt="Logo" class="logo">
-
-        <div class="product-wrapper">
-            <div class="guarantee-seal">
-                <div class="days">30</div>
-                <div class="text">Dias<br>Garantia</div>
+        <div class="content">
+            <!-- Pergunta 1 -->
+            <div class="question-container active" data-question="1">
+                <div class="question-title">Qual é o seu principal objetivo agora?</div>
+                <div class="options">
+                    <div class="option" data-answer="1">Perder peso rápido</div>
+                    <div class="option" data-answer="2">Reduzir barriga e inchaço</div>
+                    <div class="option" data-answer="3">Controlar a fome/ansiedade</div>
+                    <div class="option" data-answer="4">Manter o peso, mas definir</div>
+                </div>
             </div>
-            <div class="product-image">
-                <img src="assets/produto.png" alt="Ozen Vitta">
+
+            <!-- Pergunta 2 -->
+            <div class="question-container" data-question="2">
+                <div class="question-title">Há quanto tempo você sente dificuldade para emagrecer?</div>
+                <div class="options">
+                    <div class="option" data-answer="1">Menos de 3 meses</div>
+                    <div class="option" data-answer="2">De 3 a 12 meses</div>
+                    <div class="option" data-answer="3">Mais de 1 ano</div>
+                    <div class="option" data-answer="4">Desde sempre</div>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question-container" data-question="3">
+                <div class="question-title">O que mais te atrapalha hoje?</div>
+                <div class="options">
+                    <div class="option" data-answer="1">Fome emocional e ansiedade</div>
+                    <div class="option" data-answer="2">Comer doce sem conseguir controlar</div>
+                    <div class="option" data-answer="3">Metabolismo lento</div>
+                    <div class="option" data-answer="4">Inchaço e retenção</div>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question-container" data-question="4">
+                <div class="question-title">Você já tentou algum método antes?</div>
+                <div class="options">
+                    <div class="option" data-answer="1">Dietas restritas</div>
+                    <div class="option" data-answer="2">Academia / treino</div>
+                    <div class="option" data-answer="3">Medicamentos</div>
+                    <div class="option" data-answer="4">Nunca tentei nada</div>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="question-container" data-question="5">
+                <div class="question-title">Qual resultado você gostaria de ver nas próximas 4 semanas?</div>
+                <div class="options">
+                    <div class="option" data-answer="1">3–4 kg</div>
+                    <div class="option" data-answer="2">5–7 kg</div>
+                    <div class="option" data-answer="3">8 kg ou mais</div>
+                    <div class="option" data-answer="4">Não sei, só quero um resultado real</div>
+                </div>
+            </div>
+
+            <!-- Tela de Loading -->
+            <div class="loading-screen">
+                <div class="spinner"></div>
+                <div class="loading-text">Analisando seu perfil… isso leva apenas alguns segundos.</div>
+            </div>
+
+            <!-- Tela de Resultado -->
+            <div class="result-screen">
+                <div class="success-icon">✓</div>
+                <div class="result-title">Seu perfil é compatível com o Protocolo de Emagrecimento Acelerado</div>
+                <div class="result-text">Com base nas suas respostas, você se enquadra no grupo que costuma ter resultados visíveis nas primeiras semanas.</div>
+                <button class="cta-button" onclick="redirectToOffer()">VER PROTOCOLO RECOMENDADO PARA O SEU PERFIL</button>
             </div>
         </div>
-
-        <div class="pain-block">
-            <h3>😔 Você já tentou de tudo e nada funciona?</h3>
-            <p>Dietas restritivas, exercícios exaustivos, chás milagrosos... e o peso continua o mesmo? <strong>Você não está sozinha.</strong> O problema pode não ser falta de esforço, mas sim o que está faltando no seu organismo.</p>
-        </div>
-
-        <div class="difficulty-block">
-            <h2>❗ Por que tanta gente tem dificuldade para emagrecer?</h2>
-            <p>Após os <strong>25 anos</strong>, o organismo passa por mudanças naturais que dificultam os resultados:</p>
-            <ul class="difficulty-list">
-                <li><span>🐌</span> Metabolismo começa a ficar mais lento</li>
-                <li><span>🥠</span> O corpo armazena mais gordura do que antes</li>
-                <li><span>😣</span> Fome emocional e ansiedade atrapalham a rotina</li>
-                <li><span>💧</span> Dietas demoram mais para mostrar resultados</li>
-            </ul>
-        </div>
-
-        <div class="benefits">
-            <div class="benefits-title">💚 Como o Ozen Vitta pode te ajudar?</div>
-            <div class="benefit-card"><span>🔥</span> Auxilia na queima de gordura localizada de forma natural</div>
-            <div class="benefit-card"><span>🍽️</span> Ajuda no controle do apetite e na redução da compulsão</div>
-            <div class="benefit-card"><span>⚡</span> Pode contribuir para mais energia e melhor disposição</div>
-            <div class="benefit-card"><span>🌿</span> Sem glúten, sem lactose e com ativos naturais</div>
-            <div class="benefit-card"><span>🧠</span> Pode ajudar no bem-estar e na redução do estresse alimentar</div>
-        </div>
-
-        <div class="mid-cta">
-            <p>👇 Gostou? Clique e conheça o Ozen Vitta agora!</p>
-            <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button" onclick="fbq('track', 'Lead');">QUERO EMAGRECER DE VERDADE →</a>
-        </div>
-
-        <div class="urgency-bar">
-            <span>⏰</span> Oferta por tempo limitado — Enquanto durarem os estoques!
-        </div>
-
-        <div class="testimonials">
-            <div class="testimonial-title">💬 Resultados de quem já usou</div>
-            <div class="testimonial-card"><strong>Talita, 33 anos</strong><br>"Comprei 3 potes e vou adquirir mais, estou super feliz com o resultado que tive!"</div>
-            <div class="testimonial-card"><strong>Thayna, 27 anos</strong><br>"A entrega foi mais rápida que imaginei, em 6 dias já estava na minha casa"</div>
-            <div class="testimonial-card"><strong>Carol, 30 anos</strong><br>"Mesmo morando em regiões afastadas, meu OzenVitta chegou certinho! Obrigada"</div>
-            <div class="testimonial-card"><strong>Fátima, 59 anos</strong><br>"Mesmo após a menopausa eu estou tendo muito resultado em pouco tempo! Muito feliz!"</div>
-        </div>
-
-        <p class="redirect-text">Você será redirecionado para a página oficial do fabricante 👇</p>
-
-        <a href="https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3" class="cta-button" onclick="fbq('track', 'Lead');">QUERO CONHECER O OZEN VITTA →</a>
-
-        <div class="security">🔒 Compra 100% segura e protegida</div>
     </div>
+
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 5;
+        const answers = {};
+
+        // Selecionar todas as opções
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const questionContainer = this.closest('.question-container');
+                const questionNum = parseInt(questionContainer.dataset.question);
+                
+                // Remove seleção anterior
+                questionContainer.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Adiciona seleção atual
+                this.classList.add('selected');
+                
+                // Salva resposta
+                answers[questionNum] = this.dataset.answer;
+                
+                // Aguarda um pouco e avança
+                setTimeout(() => {
+                    nextQuestion();
+                }, 400);
+            });
+        });
+
+        function nextQuestion() {
+            // Esconde pergunta atual
+            document.querySelector(`[data-question="${currentQuestion}"]`).classList.remove('active');
+            
+            currentQuestion++;
+            
+            // Atualiza barra de progresso
+            updateProgress();
+            
+            if (currentQuestion <= totalQuestions) {
+                // Mostra próxima pergunta
+                document.querySelector(`[data-question="${currentQuestion}"]`).classList.add('active');
+            } else {
+                // Mostra tela de loading
+                showLoading();
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestion - 1) / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function showLoading() {
+            document.querySelector('.loading-screen').classList.add('active');
+            
+            // Simula análise por 3 segundos
+            setTimeout(() => {
+                showResult();
+            }, 3000);
+        }
+
+        function showResult() {
+            document.querySelector('.loading-screen').classList.remove('active');
+            document.querySelector('.result-screen').classList.add('active');
+            
+            // Completa a barra de progresso
+            document.getElementById('progressBar').style.width = '100%';
+        }
+
+        function redirectToOffer() {
+            // Dispara evento de conversão no Facebook Pixel
+            fbq('track', 'Lead');
+            
+            // Redireciona para a página oficial do Ozen Vitta
+            window.location.href = 'https://ev.braip.com/ref?pv=proxxnde&af=afivp47my3';
+        }
+    </script>
 </body>
 </html>
