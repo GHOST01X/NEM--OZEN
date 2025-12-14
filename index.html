@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo de Emagrecimento Acelerado</title>
+    <title>Análise Personalizada - Protocolo Natural</title>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -32,7 +32,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #fafafa;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -42,53 +42,62 @@
 
         .container {
             background: white;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            max-width: 540px;
             width: 100%;
             overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 50px 40px;
+            background: white;
+            padding: 36px 28px 28px;
             text-align: center;
-            color: white;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .header h1 {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #1a1a1a;
+            margin-bottom: 12px;
         }
 
-        .header p {
-            font-size: 16px;
-            opacity: 0.95;
-            line-height: 1.5;
+        .header .subtitle {
+            font-size: 14px;
+            color: #666;
+            font-weight: 400;
         }
 
         .progress-bar {
-            height: 6px;
+            height: 3px;
             background: #f0f0f0;
             position: relative;
         }
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            background: #1E7F6D;
             width: 0%;
-            transition: width 0.4s ease;
+            transition: width 0.5s ease;
         }
 
         .content {
-            padding: 50px 40px;
+            padding: 36px 28px 44px;
+        }
+
+        .question-counter {
+            font-size: 13px;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .question-container {
             display: none;
-            animation: fadeIn 0.5s ease;
+            animation: fadeIn 0.4s ease;
         }
 
         .question-container.active {
@@ -98,7 +107,7 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(12px);
             }
             to {
                 opacity: 1;
@@ -107,11 +116,12 @@
         }
 
         .question-title {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 21px;
+            font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 30px;
-            line-height: 1.3;
+            margin-bottom: 26px;
+            line-height: 1.4;
+            text-align: center;
         }
 
         .options {
@@ -121,59 +131,99 @@
         }
 
         .option {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
+            background: #fafafa;
+            border: 2px solid #e8e8e8;
             border-radius: 12px;
-            padding: 18px 24px;
+            padding: 18px 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
+            transition: all 0.25s ease;
+            font-size: 15px;
             font-weight: 500;
-            color: #495057;
+            color: #333;
+            position: relative;
+            text-align: center;
         }
 
         .option:hover {
-            background: #e9ecef;
-            border-color: #667eea;
-            transform: translateX(4px);
+            background: #f5f9f8;
+            border-color: #1E7F6D;
         }
 
         .option.selected {
-            background: #667eea;
-            border-color: #667eea;
+            background: #1E7F6D;
+            border-color: #1E7F6D;
             color: white;
+        }
+
+        .option.popular::after {
+            content: "⭐ Mais comum";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 11px;
+            color: #1E7F6D;
+            background: #e6f4f1;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .option.selected.popular::after {
+            color: white;
+            background: rgba(255,255,255,0.25);
         }
 
         .loading-screen {
             display: none;
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 28px;
         }
 
         .loading-screen.active {
             display: block;
-            animation: fadeIn 0.5s ease;
+            animation: fadeIn 0.4s ease;
         }
 
-        .spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid #f0f0f0;
-            border-top: 4px solid #667eea;
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #1E7F6D;
             border-radius: 50%;
-            margin: 0 auto 24px;
-            animation: spin 1s linear infinite;
+            animation: bounce 1.4s infinite ease-in-out;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .loading-text {
-            font-size: 20px;
-            font-weight: 600;
-            color: #495057;
+            font-size: 17px;
+            font-weight: 500;
+            color: #555;
+            line-height: 1.6;
         }
 
         .result-screen {
@@ -184,94 +234,138 @@
 
         .result-screen.active {
             display: block;
-            animation: fadeIn 0.5s ease;
+            animation: fadeIn 0.4s ease;
         }
 
         .success-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 64px;
+            height: 64px;
+            background: #1E7F6D;
             border-radius: 50%;
-            margin: 0 auto 24px;
+            margin: 0 auto 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            font-size: 36px;
         }
 
         .result-title {
-            font-size: 28px;
-            font-weight: 800;
+            font-size: 24px;
+            font-weight: 600;
             color: #1a1a1a;
             margin-bottom: 16px;
-            line-height: 1.2;
+            line-height: 1.3;
         }
 
         .result-text {
-            font-size: 16px;
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 40px;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .result-note {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 36px;
+            font-style: italic;
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1E7F6D, #249A85);
             color: white;
             border: none;
-            border-radius: 12px;
-            padding: 20px 40px;
-            font-size: 18px;
-            font-weight: 700;
+            border-radius: 14px;
+            padding: 19px 36px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
             width: 100%;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 16px rgba(30, 127, 109, 0.25);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 6px 22px rgba(30, 127, 109, 0.35);
         }
 
         .cta-button:active {
             transform: translateY(0);
         }
 
+        .cta-helper {
+            font-size: 13px;
+            color: #999;
+            margin-top: 14px;
+            font-weight: 400;
+        }
+
         @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+
             .header {
-                padding: 40px 24px;
+                padding: 32px 24px 24px;
             }
 
             .header h1 {
-                font-size: 26px;
+                font-size: 22px;
             }
 
-            .header p {
-                font-size: 15px;
+            .header .subtitle {
+                font-size: 13px;
             }
 
             .content {
-                padding: 40px 24px;
+                padding: 32px 24px 40px;
+            }
+
+            .question-counter {
+                font-size: 12px;
+                margin-bottom: 18px;
             }
 
             .question-title {
-                font-size: 20px;
+                font-size: 19px;
+                margin-bottom: 24px;
             }
 
             .option {
-                padding: 16px 20px;
-                font-size: 15px;
+                padding: 16px 18px;
+                font-size: 14px;
+            }
+
+            .option.popular::after {
+                font-size: 10px;
+                padding: 3px 7px;
+                right: 18px;
+            }
+
+            .loading-screen {
+                padding: 44px 24px;
+            }
+
+            .loading-text {
+                font-size: 16px;
             }
 
             .result-title {
-                font-size: 24px;
+                font-size: 21px;
+            }
+
+            .result-text {
+                font-size: 14px;
+            }
+
+            .result-note {
+                font-size: 12px;
             }
 
             .cta-button {
                 padding: 18px 32px;
-                font-size: 16px;
+                font-size: 15px;
             }
         }
     </style>
@@ -279,8 +373,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Descubra se você é elegível para o Protocolo de Emagrecimento Acelerado</h1>
-            <p>Responda 4 perguntas rápidas e veja se o seu perfil é compatível com o método usado por milhares de mulheres.</p>
+            <h1>Responda 4 perguntas rápidas e descubra o protocolo ideal para o seu corpo</h1>
+            <div class="subtitle">Análise gratuita • Leva menos de 1 minuto</div>
         </div>
 
         <div class="progress-bar">
@@ -290,78 +384,77 @@
         <div class="content">
             <!-- Pergunta 1 -->
             <div class="question-container active" data-question="1">
-                <div class="question-title">Qual é o seu principal objetivo agora?</div>
+                <div class="question-counter">Pergunta 1 de 4</div>
+                <div class="question-title">Qual dessas situações mais te incomoda hoje?</div>
                 <div class="options">
-                    <div class="option" data-answer="1">Perder peso rápido</div>
-                    <div class="option" data-answer="2">Reduzir barriga e inchaço</div>
-                    <div class="option" data-answer="3">Controlar a fome/ansiedade</div>
-                    <div class="option" data-answer="4">Manter o peso, mas definir</div>
+                    <div class="option" data-answer="1">Barriga inchada</div>
+                    <div class="option popular" data-answer="2">Dificuldade para emagrecer</div>
+                    <div class="option" data-answer="3">Sensação de retenção de líquido</div>
+                    <div class="option" data-answer="4">Falta de resultados mesmo tentando se cuidar</div>
                 </div>
             </div>
 
             <!-- Pergunta 2 -->
             <div class="question-container" data-question="2">
-                <div class="question-title">Há quanto tempo você sente dificuldade para emagrecer?</div>
+                <div class="question-counter">Pergunta 2 de 4</div>
+                <div class="question-title">Você já tentou mudar alimentação ou rotina recentemente?</div>
                 <div class="options">
-                    <div class="option" data-answer="1">Menos de 3 meses</div>
-                    <div class="option" data-answer="2">De 3 a 12 meses</div>
-                    <div class="option" data-answer="3">Mais de 1 ano</div>
-                    <div class="option" data-answer="4">Desde sempre</div>
+                    <div class="option" data-answer="1">Sim, mas sem resultados</div>
+                    <div class="option" data-answer="2">Sim, com pouco resultado</div>
+                    <div class="option" data-answer="3">Não, ainda não</div>
+                    <div class="option" data-answer="4">Prefiro não responder</div>
                 </div>
             </div>
 
             <!-- Pergunta 3 -->
             <div class="question-container" data-question="3">
-                <div class="question-title">O que mais te atrapalha hoje?</div>
+                <div class="question-counter">Pergunta 3 de 4</div>
+                <div class="question-title">Em qual período você mais percebe o inchaço?</div>
                 <div class="options">
-                    <div class="option" data-answer="1">Fome emocional e ansiedade</div>
-                    <div class="option" data-answer="2">Comer doce sem conseguir controlar</div>
-                    <div class="option" data-answer="3">Metabolismo lento</div>
-                    <div class="option" data-answer="4">Inchaço e retenção</div>
+                    <div class="option popular" data-answer="1">Ao longo do dia</div>
+                    <div class="option" data-answer="2">À noite</div>
+                    <div class="option" data-answer="3">Após refeições</div>
+                    <div class="option" data-answer="4">O tempo todo</div>
                 </div>
             </div>
 
             <!-- Pergunta 4 -->
             <div class="question-container" data-question="4">
-                <div class="question-title">Você já tentou algum método antes?</div>
+                <div class="question-counter">Pergunta 4 de 4</div>
+                <div class="question-title">Qual é o seu principal objetivo agora?</div>
                 <div class="options">
-                    <div class="option" data-answer="1">Dietas restritas</div>
-                    <div class="option" data-answer="2">Academia / treino</div>
-                    <div class="option" data-answer="3">Medicamentos</div>
-                    <div class="option" data-answer="4">Nunca tentei nada</div>
-                </div>
-            </div>
-
-            <!-- Pergunta 5 -->
-            <div class="question-container" data-question="5">
-                <div class="question-title">Qual resultado você gostaria de ver nas próximas 4 semanas?</div>
-                <div class="options">
-                    <div class="option" data-answer="1">3–4 kg</div>
-                    <div class="option" data-answer="2">5–7 kg</div>
-                    <div class="option" data-answer="3">8 kg ou mais</div>
-                    <div class="option" data-answer="4">Não sei, só quero um resultado real</div>
+                    <div class="option" data-answer="1">Reduzir medidas</div>
+                    <div class="option" data-answer="2">Desinchar o corpo</div>
+                    <div class="option" data-answer="3">Melhorar autoestima</div>
+                    <div class="option" data-answer="4">Sentir-se melhor com o próprio corpo</div>
                 </div>
             </div>
 
             <!-- Tela de Loading -->
             <div class="loading-screen">
-                <div class="spinner"></div>
-                <div class="loading-text">Analisando seu perfil… isso leva apenas alguns segundos.</div>
+                <div class="loading-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="loading-text">Analisando suas respostas…<br>Identificando o melhor protocolo para seu perfil…</div>
             </div>
 
             <!-- Tela de Resultado -->
             <div class="result-screen">
                 <div class="success-icon">✓</div>
-                <div class="result-title">Seu perfil é compatível com o Protocolo de Emagrecimento Acelerado</div>
-                <div class="result-text">Com base nas suas respostas, você se enquadra no grupo que costuma ter resultados visíveis nas primeiras semanas.</div>
-                <button class="cta-button" onclick="redirectToOffer()">VER PROTOCOLO RECOMENDADO PARA O SEU PERFIL</button>
+                <div class="result-title">Seu perfil é compatível com um protocolo natural personalizado</div>
+                <div class="result-text">A maioria das mulheres com esse perfil começa a notar mudanças nas primeiras semanas quando segue o protocolo correto para o próprio corpo.</div>
+                <div class="result-note">Resultados variam de pessoa para pessoa.</div>
+                <button class="cta-button" onclick="redirectToOffer()">Começar a análise gratuita</button>
+                <div class="cta-helper">Leva menos de 1 minuto</div>
             </div>
         </div>
     </div>
 
     <script>
         let currentQuestion = 1;
-        const totalQuestions = 5;
+        const totalQuestions = 4;
         const answers = {};
 
         // Selecionar todas as opções
@@ -414,10 +507,10 @@
         function showLoading() {
             document.querySelector('.loading-screen').classList.add('active');
             
-            // Simula análise por 3 segundos
+            // Simula análise por 2.5 segundos
             setTimeout(() => {
                 showResult();
-            }, 3000);
+            }, 2500);
         }
 
         function showResult() {
